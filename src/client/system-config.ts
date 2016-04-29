@@ -20,5 +20,8 @@ function createPackageConfig(barrelList: string[]): any {
 export const config: any = {
   packages: Object.assign({
     // Add your custom SystemJS packages here.
-  }, createPackageConfig(barrels))
+  }, createPackageConfig(barrels)),
+ map: {
+ 'moment': 'vendor/moment/moment.js'
+ }
 };

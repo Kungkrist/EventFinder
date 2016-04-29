@@ -6,7 +6,7 @@
   <base href="/">
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
        Only enable service workers in production.
@@ -32,6 +32,7 @@
   <script src="vendor/angular2/bundles/http.dev.js"></script>
   <script src="vendor/angular2/bundles/router.dev.js"></script>
   
+  <script src="vendor/ng2-bootstrap/bundles/ng2-bootstrap.min.js"></script>
   <script>
     System.import('system-config.js').then(function(systemConfig) {
       System.config(systemConfig.config);
