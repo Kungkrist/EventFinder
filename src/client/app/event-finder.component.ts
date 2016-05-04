@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {AngularFire} from 'angularfire2';
-import {MyDemosearchComponent} from './my-demosearch';
+import {MyMainComponent} from './my-main';
 @Component({
   moduleId: __moduleName,
   selector: 'event-finder-app',
@@ -12,7 +12,7 @@ import {MyDemosearchComponent} from './my-demosearch';
   pipes: []
 })
 @RouteConfig([
-  {path:'/my-demosearch', name: 'My-demosearch', component: MyDemosearchComponent, useAsDefault: true}
+  {path:'/main', name: 'My-main', component: MyMainComponent, useAsDefault: true}
 ])
 
 export class EventFinderApp {

@@ -2,6 +2,7 @@ const barrels: string[] = [
   'app',
   'app/shared',
   'app/my-demosearch',
+  'app/my-main',
   /** @cli-barrel */
 ];
 
