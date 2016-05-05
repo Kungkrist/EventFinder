@@ -51,3 +51,10 @@ div.container {
 .comment-text {
   overflow:auto;
 }
+
+h5.no-comments {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+}

@@ -11,25 +11,30 @@
 
 <div class="container">
   <div class="row">
-    <div *ngFor="#comment of comments">
-      <div class="col-sm-3">
-        <div class="thumbnail">
-         <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-        </div><!-- /thumbnail -->
-      </div><!-- /col-sm-1 -->
+    <div *ngIf="commentsCount() > 0">
+      <div *ngFor="#comment of comments">
+        <div class="col-sm-3">
+          <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+          </div><!-- /thumbnail -->
+        </div><!-- /col-sm-1 -->
 
-      <div class="col-sm-9">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <div class="row">
-              <strong class="col-xs-12 col-sm-6">{{comment.username}}</strong> <span class="text-muted col-xs12 col-sm-6">{{comment.date}} {{comment.time}}</span>
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="row">
+                <strong class="col-xs-12 col-sm-6">{{comment.username}}</strong> <span class="text-muted comment-date-time col-xs12 col-sm-6">{{comment.date}} {{comment.time}}</span>
+              </div>
             </div>
-          </div>
-          <div class="panel-body">
-            <div class="comment-text">{{comment.text}}</div>
-          </div><!-- /panel-body -->
-        </div><!-- /panel panel-default -->
-      </div><!-- /col-sm-5 -->
+            <div class="panel-body">
+              <div class="comment-text">{{comment.text}}</div>
+            </div><!-- /panel-body -->
+          </div><!-- /panel panel-default -->
+        </div><!-- /col-sm-5 -->
+      </div> <!-- /ngIf -->
+    </div> <!-- /ngFor -->
+    <div *ngIf="commentsCount() <= 0">
+      <h5 class="no-comments">Be the first one to comment!</h5>
     </div>
   </div><!-- /row -->
 </div><!-- /container -->

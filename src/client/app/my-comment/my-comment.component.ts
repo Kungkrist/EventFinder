@@ -17,4 +17,11 @@ export class MyCommentComponent implements OnInit {
   ngOnInit() {
     this._mcs.getComments().then(r => this.comments = r);
   }
+  
+  commentsCount() {
+    if (this.comments != null || this.comments != undefined) {
+      return this.comments.length;
+    }
+    return 0;
+  }
 }
