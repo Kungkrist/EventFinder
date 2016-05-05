@@ -21,7 +21,9 @@
       <div class="col-sm-9">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <strong>{{comment.username}}</strong> <span class="text-muted">{{comment.date}} {{comment.time}}</span>
+            <div class="row">
+              <strong class="col-xs-12 col-sm-6">{{comment.username}}</strong> <span class="text-muted col-xs12 col-sm-6">{{comment.date}} {{comment.time}}</span>
+            </div>
           </div>
           <div class="panel-body">
             <div class="comment-text">{{comment.text}}</div>
