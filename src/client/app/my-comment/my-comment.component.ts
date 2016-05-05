@@ -11,6 +11,7 @@ import {MyCommentService} from '../my-comment.service'
 })
 export class MyCommentComponent implements OnInit {
   public comments: Comment[];
+  public hej = {name:"ost"};
   constructor(private _mcs : MyCommentService) {}
   
   ngOnInit() {

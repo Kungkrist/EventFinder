@@ -1,36 +1,33 @@
 <div class="container">
-	<div class="row">
-		<div class="span4 well col-sm-12" style="padding-bottom:0">
-      <form accept-charset="UTF-8" action="" method="POST">
-        <textarea class="span4" id="new_message" name="new_message"
-                  placeholder="Type in your message" rows="5"></textarea>
-        <br>
-        <button class="btn btn-info" type="submit">Post New Message</button>
-      </form>
-    </div>
-	</div>
+  <div class="span4 well">
+    <form accept-charset="UTF-8" action="" method="POST">
+      <textarea class="span4" class="new_message" name="new_message"
+                placeholder="Type in your message" rows="5"></textarea>
+      <br>
+      <button class="btn btn-info" type="submit">Post New Message</button>
+    </form>
+  </div>
 </div>
 
-<div class="container2">
+<div class="container">
   <div class="row">
     <div *ngFor="#comment of comments">
-      <div class="col-sm-1">
+      <div class="col-sm-3">
         <div class="thumbnail">
          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
         </div><!-- /thumbnail -->
       </div><!-- /col-sm-1 -->
 
-    <div class="col-sm-11">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <strong>{{comment.username}}</strong> <span class="text-muted">{{comment.date}} {{comment.time}}</span>
-        </div>
-        <div class="panel-body">
-          {{comment.text}}
-      </div><!-- /panel-body -->
-    </div><!-- /panel panel-default -->
-    </div><!-- /col-sm-5 -->
+      <div class="col-sm-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>{{comment.username}}</strong> <span class="text-muted">{{comment.date}} {{comment.time}}</span>
+          </div>
+          <div class="panel-body">
+            {{comment.text}}
+          </div><!-- /panel-body -->
+        </div><!-- /panel panel-default -->
+      </div><!-- /col-sm-5 -->
     </div>
   </div><!-- /row -->
-
 </div><!-- /container -->

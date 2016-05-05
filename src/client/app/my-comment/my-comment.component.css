@@ -32,13 +32,17 @@
 .input-group-addon a {
   color: #454545;
 }
-
-.span4 {
-  min-width: 500px;
+textarea {
+  width: 100%;
+  max-width: 100%;
+}
+div.container {
+  width: 100%;
+  margin: 0;
+  padding-right: 0;
 }
 
-
-
-.btn-info {
-  margin-bottom: 20px;
+.thumbnail {
+  max-width: 90px;
+  max-height: 90px;
 }
