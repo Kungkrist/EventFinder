@@ -12,7 +12,7 @@ import {MyMainComponent} from './my-main';
   pipes: []
 })
 @RouteConfig([
-  {path:'/main', name: 'My-main', component: MyMainComponent, useAsDefault: true}
+  {path:'/home', name: 'Home', component: MyMainComponent, useAsDefault: true}
 ])
 
 export class EventFinderApp {

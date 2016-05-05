@@ -3,6 +3,8 @@ const barrels: string[] = [
   'app/shared',
   'app/my-demosearch',
   'app/my-main',
+  'app/my-comment',
+  'app/mock-detail',
   /** @cli-barrel */
 ];
 
