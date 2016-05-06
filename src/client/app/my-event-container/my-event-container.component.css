@@ -1,0 +1,15 @@
+
+.column {
+  height: 150px;
+  width: 150px;
+  margin: 10px 10px 10px 10px;
+  border: solid black 0.5px;
+}
+.row {  
+  margin: 0 auto;
+  width: 680px;
+}
+.scrollable {
+  height: 100%;
+  overflow: auto;
+}
