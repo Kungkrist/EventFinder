@@ -11,11 +11,10 @@ import {MyCommentService} from '../my-comment.service'
 })
 export class MyCommentComponent implements OnInit {
   public comments: Comment[];
-  public hej = {name:"ost"};
   constructor(private _mcs : MyCommentService) {}
   
   ngOnInit() {
-    this._mcs.getComments().then(r => this.comments = r);
+  //  this._mcs.getComments().(r => this.comments = r);
   }
   
   commentsCount() {
