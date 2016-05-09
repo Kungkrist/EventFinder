@@ -1,0 +1,19 @@
+<div class="content" *ngFor="#e of event">
+  <div *ngIf="e.$key === 'name'">
+    <span class="title">{{event.name}}</span><br>
+  </div>
+  <div *ngIf="e.$key === 'date'">
+    <span class="label">Date: </span><span>{{event.date}}</span><br>
+  </div>
+  <div *ngIf="e.$key === 'place'">
+     <span class="label">Place: </span><span>{{event.place}}</span><br>
+  </div>
+  <div *ngIf="e.$key === 'description'">
+     <p>{{event.description}}</p>
+  </div>
+  <div *ngIf="e.$key === 'image'">
+     <div class="image">
+            <!--    {{event.image}} -->
+     </div>
+  </div>
+</div>

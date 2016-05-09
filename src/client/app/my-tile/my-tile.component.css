@@ -1,0 +1,22 @@
+.content {
+    padding: 5px;
+    margin: 5px;
+    border: solid black 1px;
+    max-width: 300px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+img {
+    max-width: 100%
+}
+
+.title {
+    font-size: 24px;
+}
