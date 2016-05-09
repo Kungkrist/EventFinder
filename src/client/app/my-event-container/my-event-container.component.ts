@@ -1,5 +1,5 @@
 import {Component, OnInit} from 'angular2/core';
-import {MockEventService} from '../mock-event.service';
+import {EventDataService} from '../event-data.service';
 import {IEvents} from '../IEvent';
 
 @Component({
@@ -7,16 +7,16 @@ import {IEvents} from '../IEvent';
   selector: 'my-event-container',
   templateUrl: 'my-event-container.component.html',
   styleUrls: ['my-event-container.component.css'],
-  providers: [MockEventService]
+  providers: [EventDataService]
 })
 export class MyEventContainerComponent implements OnInit {
   
   events: IEvents []
 
-  constructor(private _mec: MockEventService) {}
+  constructor(private _mec: EventDataService) {}
   
   ngOnInit() {
-    this._mec.getEvents().then(events => this.events = events);
+   // this._mec.getEvents().then(events => this.events = events);
   }
 
 }

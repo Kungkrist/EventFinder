@@ -1,14 +1,13 @@
 import {Injectable} from 'angular2/core';
-import {EVENTS} from './mock-events';
 
 @Injectable()
-export class MockEventService {
+export class EventDataService {
 
   constructor() {
   }
   
   getEvents() {
-    return Promise.resolve(EVENTS);
+   // return Promise.resolve();
   }
 }
 

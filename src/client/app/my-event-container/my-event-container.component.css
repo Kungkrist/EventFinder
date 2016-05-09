@@ -1,3 +1,7 @@
+.container {
+  height: 300px;
+  overflow: auto;
+}
 
 .column {
   height: 150px;
@@ -11,5 +15,11 @@
 }
 .scrollable {
   height: 100%;
-  overflow: auto;
+}
+
+.add-event {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

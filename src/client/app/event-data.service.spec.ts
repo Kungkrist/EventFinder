@@ -9,13 +9,13 @@ import {
   injectAsync
 } from 'angular2/testing';
 import {provide} from 'angular2/core';
-import {MockEventService} from './mock-event.service';
+import {EventDataService} from './event-data.service';
 
 describe('MockEvent Service', () => {
 
-  beforeEachProviders(() => [MockEventService]);
+  beforeEachProviders(() => [EventDataService]);
   
-  it('should ...', inject([MockEventService], (service: MockEventService) => {
+  it('should ...', inject([EventDataService], (service: EventDataService) => {
 
   }));
 
