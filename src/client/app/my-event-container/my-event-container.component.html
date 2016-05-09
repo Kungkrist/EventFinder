@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3 col-xs-12 column add-event">+</div>
-      <div *ngFor="#event of events">
-      <div class="col-md-3 col-xs-12 column">{{event.event}}</div>
+      <div *ngFor="#event of events | async" class="text">
+        
+        <!--<div class="col-md-3 col-xs-12 column">{{event.event}}</div>-->
     </div>
   </div>
 </div>
