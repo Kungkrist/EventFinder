@@ -5,7 +5,7 @@ import {Component, OnInit} from 'angular2/core';
   selector: 'my-main',
   templateUrl: 'my-main.component.html',
   styleUrls: ['my-main.component.css'],
-  directives: []
+  directives: []  
 })
 export class MyMainComponent implements OnInit {
 
