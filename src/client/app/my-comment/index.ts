@@ -1,0 +1,1 @@
+export {MyCommentComponent} from './my-comment.component';
