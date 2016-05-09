@@ -3,12 +3,9 @@ const barrels: string[] = [
   'app/shared',
   'app/my-demosearch',
   'app/my-main',
-<<<<<<< HEAD
   'app/my-navbar',
-=======
   'app/my-comment',
   'app/mock-detail',
->>>>>>> my-comment
   /** @cli-barrel */
 ];
 
