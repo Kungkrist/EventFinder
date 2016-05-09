@@ -1,0 +1,1 @@
+export {MyDetailviewComponent} from './my-detailview.component';

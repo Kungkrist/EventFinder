@@ -2,6 +2,8 @@ import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {AngularFire} from 'angularfire2';
 import {MyMainComponent} from './my-main';
+import {MyDemosearchComponent} from './my-demosearch';
+import {MyDetailviewComponent} from './my-detailview';
 
 @Component({
   moduleId: __moduleName,
@@ -12,8 +14,12 @@ import {MyMainComponent} from './my-main';
   directives: [ROUTER_DIRECTIVES],
   pipes: []
 })
+
 @RouteConfig([
-  {path:'/home', name: 'Home', component: MyMainComponent, useAsDefault: true}
+
+  {path:'/home', name: 'Home', component: MyMainComponent, useAsDefault: true},
+  {path:'/my-demosearch', name: 'My-demosearch', component: MyDemosearchComponent},
+  {path:'/my-detailview', name: 'My-detailview', component: MyDetailviewComponent}
 ])
 
 export class EventFinderApp {
