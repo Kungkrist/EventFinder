@@ -7,6 +7,7 @@ const barrels: string[] = [
   'app/my-comment',
   'app/my-detailview',
   'app/my-tile',
+  'app/my-event-container',
   /** @cli-barrel */
 ];
 
