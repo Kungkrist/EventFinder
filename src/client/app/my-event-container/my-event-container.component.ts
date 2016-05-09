@@ -8,11 +8,11 @@ import {AngularFire, FirebaseListObservable} from 'angularfire2';
   selector: 'my-event-container',
   templateUrl: 'my-event-container.component.html',
   styleUrls: ['my-event-container.component.css'],
-  providers: [EventDataService]
+  directives: [MyTileComponent]
 })
 export class MyEventContainerComponent implements OnInit {
   
-  events: {};
+  events: FirebaseListObservable <any []>;
   
   
   constructor(public af: AngularFire) {}

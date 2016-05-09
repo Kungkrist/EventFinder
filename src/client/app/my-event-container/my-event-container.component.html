@@ -1,13 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3 col-xs-12 column add-event">+</div>
-      <div *ngFor="#event of events">
-      <div class="col-md-3 col-xs-12 column">{{event.event}}</div>
+      <div *ngFor="#event of events | async">
+        <my-tile></my-tile>
+      <!--<div class="col-md-3 col-xs-12 column">{{event.event}}</div>-->
     </div>
   </div>
 </div>
-                  <!--<li *ngFor="#event of events"
-                        [class.selected]="event === se"
-                        (click)="onSelect(hero)">
-                        <span class="badge">{{hero.id}}</span> {{hero.name}}
-                    </li>-->
+                 

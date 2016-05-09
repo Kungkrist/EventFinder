@@ -1,8 +1,8 @@
-.content {
-    padding: 5px;
-    margin: 5px;
-    border: solid black 1px;
-    max-width: 300px;
+div {
+  height: 150px;
+  width: 150px;
+  margin: 10px 10px 10px 10px;
+  border: solid black 0.5px;
 }
 
 .label {
