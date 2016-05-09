@@ -1,6 +1,7 @@
 import {Component, OnInit} from 'angular2/core';
 import {EventDataService} from '../event-data.service';
-import {Event} from '../IEvent';
+import {MyTileComponent} from  '../my-tile';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 @Component({
   moduleId: __moduleName,
@@ -11,12 +12,13 @@ import {Event} from '../IEvent';
 })
 export class MyEventContainerComponent implements OnInit {
   
-  events: Event [];
-
-  constructor(private _mec: EventDataService) {}
+  events: {};
+  
+  
+  constructor(public af: AngularFire) {}
   
   ngOnInit() {
-   // this._mec.getEvents().then(events => this.events = events);
+    this.events = this.af.database.list('/events')
   }
 
 }
