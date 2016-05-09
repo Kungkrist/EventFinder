@@ -11,7 +11,7 @@ import {IEvents} from '../IEvent';
 })
 export class MyEventContainerComponent implements OnInit {
   
-  events: IEvents []
+  events: IEvents [];
 
   constructor(private _mec: EventDataService) {}
   
