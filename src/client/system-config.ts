@@ -8,6 +8,7 @@ const barrels: string[] = [
   'app/my-detailview',
   'app/my-tile',
   'app/my-event-container',
+  'app/my-show-detailsview',
   /** @cli-barrel */
 ];
 
