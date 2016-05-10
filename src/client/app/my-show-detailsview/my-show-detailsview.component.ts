@@ -6,13 +6,22 @@ import {Event} from '../IEvent';
   moduleId: __moduleName,
   selector: 'my-show-detailsview',
   templateUrl: 'my-show-detailsview.component.html',
-  styleUrls: ['my-show-detailsview.component.css']
+  styleUrls: ['my-show-detailsview.component.css'],
+  providers: [MyEventService]
 })
 export class MyShowDetailsviewComponent implements OnInit {
 
-  constructor() {}
+  constructor(private eventService: MyEventService) {}
+  
+  events = {}
+  public name = "Placeholder, change to data from db"
   
   ngOnInit() {
+    this.getEvents();
+  }
+  
+  getEvents() {
+    this.events = this.eventService.getEvents();
   }
 
 }
