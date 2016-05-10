@@ -1,6 +1,7 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, Inject, Input} from 'angular2/core';
 import {MyEventService} from '../my-event.service';
 import {Event} from '../IEvent';
+import {AngularFire, FirebaseListObservable, FirebaseRef} from 'angularfire2';
 
 @Component({
   moduleId: __moduleName,
@@ -10,22 +11,18 @@ import {Event} from '../IEvent';
   providers: [MyEventService]
 })
 export class MyTileComponent implements OnInit {
-
-  constructor(private eventService: MyEventService) {}
+  @Input () eventId;
+  constructor(public af: AngularFire, @Inject(FirebaseRef) public ref: Firebase) {}
   
- event:Event = {name: "string",
-  date: "string",
-  timeStart: "string",
-  timeEnd: "string",
-  description: "string",
-  place: "string"};
+  event = {}
   
   ngOnInit() {
-    this.getEvents();
+    
+     this.ref.child('/events/' + this.eventId).on("value", (a) => {
+       this.event = a.val();
+       console.log(this.event);
+     });
+    // this.event = this.af.database.list('/events');
   }
-  
-  getEvents() {
-    this.event = this.eventService.getEvents();
-  }
-
 }
+
