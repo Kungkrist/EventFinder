@@ -1,9 +1,10 @@
-import {Component, OnInit, Inject} from 'angular2/core';
+import {Component, OnInit, Inject, Injector} from 'angular2/core';
 import {MyEventService} from '../my-event.service';
 import {Event, FullEvent} from '../IEvent';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {MyCommentComponent} from '../my-comment';
-import {RouteData} from 'angular2/router';
+import {RouteData, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
+import {Http} from 'angular2/http';
 
 @Component({
   moduleId: __moduleName,
@@ -14,10 +15,11 @@ import {RouteData} from 'angular2/router';
   directives: [MyCommentComponent],
   inputs: ['comments']
 })
+//@CanActivate(() => tokenNotExpired())
 export class MyDetailviewComponent implements OnInit {
 //Auto-gen = MyDetailviewComponent - kolla om det gör något.
 
-  constructor(private eventService: MyEventService, public af: AngularFire, @Inject(FirebaseRef) public ref:Firebase, public data: RouteData) {
+  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams) {
   }
   event: FullEvent = {name: "",
   date: "",
@@ -31,15 +33,16 @@ export class MyDetailviewComponent implements OnInit {
   phone: "",
   email: ""}//FirebaseObjectObservable<Event>
   
-  public name = "Placeholder, change to data from db"
+  //public name = "Placeholder, change to data from db"
   eventId = "/event0"
   
   ngOnInit() {
     this.getEvents();
     // Get uid from sender
-    this.eventId = this.data.get('uid');
-    
-    this.ref.child('/events').child(this.eventId).on("value", (v) => this.event = v.val());
+    this.params = this.injector.parent.get(RouteParams);
+    this.eventId = this.params.get('uid');
+    console.log(this.eventId);
+    this.ref.child('/events').child('/'+this.eventId).on("value", (v) => this.event = v.val());
     
   }
   
