@@ -3,6 +3,7 @@ div {
   width: 150px;
   margin: 10px 10px 10px 10px;
   border: solid black 0.5px;
+  border-radius: 15px;
 }
 
 .label {
