@@ -6,3 +6,16 @@ export interface Event {
   description: string,
   place: string
 }
+export interface FullEvent {
+  name: string,
+  date: string,
+  start_time: string,
+  stop_time: string,
+  info: string,
+  adress: string, 
+  comments: [Object],
+  price: string,
+  organiser: string,
+  phone: string,
+  email: string
+}

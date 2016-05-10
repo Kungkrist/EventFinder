@@ -1,4 +1,4 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, Input} from 'angular2/core';
 import {Comment} from '../IComment';
 import {MyCommentService} from '../my-comment.service'
 
@@ -10,7 +10,7 @@ import {MyCommentService} from '../my-comment.service'
   providers: [MyCommentService]
 })
 export class MyCommentComponent implements OnInit {
-  public comments: Comment[];
+  @Input()comments 
   constructor(private _mcs : MyCommentService) {}
   
   ngOnInit() {
