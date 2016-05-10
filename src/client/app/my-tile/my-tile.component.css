@@ -1,13 +1,15 @@
-div {
-  height: 150px;
-  width: 150px;
+.rounded {
+  height: 400px;
+  width: 200px;
   margin: 10px 10px 10px 10px;
-  border: solid black 0.5px;
+  border: solid black 1px;
   border-radius: 15px;
 }
 
-.label {
+.lol {
     font-weight: bold;
+    color: black;
+    text-align: left;
 }
 
 body {
@@ -15,7 +17,9 @@ body {
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
+    margin-top: 15px;
+    background-color: grey;
 }
 
 .title {
