@@ -3,7 +3,7 @@ import {MyEventService} from '../my-event.service';
 import {Event, FullEvent} from '../IEvent';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {MyCommentComponent} from '../my-comment';
-import {RouteData, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
+import {RouteData, Router, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
 import {Http} from 'angular2/http';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2/router';
 
@@ -75,7 +75,7 @@ export class MyDetailviewComponent implements OnInit {
       return false;
     }else {
       this.ref.child('/events').child(this.eventId).update(x);
-      this.router.navigate(['/My-show-detailsview', { uid: eid }]);
+      this.router.navigate(['/Home', { uid: id }]);
       return false;
     }
     //console.log(this.event);
@@ -94,7 +94,15 @@ export class MyDetailviewComponent implements OnInit {
   }
   
   delete() {
+    alert('ARE YOU SURE?');
      this.ref.child('/events/').child(this.eventId).remove();
+     this.router.navigate(['/Home']);
+     return false;
+  }
+  
+  cancel() {
+    this.router.navigate(['/Home']);
+    return false;
   }
   
   addComment() {
