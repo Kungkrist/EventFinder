@@ -14,6 +14,7 @@ import {Http} from 'angular2/http';
 export class MyCommentComponent implements OnInit {
   @Input()uid 
   comments: Comment[]
+  commentText =  ""
   constructor( @Inject(FirebaseRef) public ref:Firebase, public injector: Injector, private _mcs : MyCommentService) {}
   
   ngOnInit() {
@@ -25,16 +26,18 @@ export class MyCommentComponent implements OnInit {
     if (this.comments != null || this.comments != undefined) {
       return this.comments.length;
     }
+    this.comments = [];
     return 0;
   }
   
   postComment() {
     console.log("Post");
+    var text = this.commentText
     var x : Comment = {
-      username: "lol",
+      username: "Anonymous",
       time: "14:45",
       date: "2016-05-23",
-      text: "Jag har postat"
+      text: text
     };
     //this.comments.push(x);
     this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(x);
