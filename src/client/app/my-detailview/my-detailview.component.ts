@@ -3,7 +3,7 @@ import {MyEventService} from '../my-event.service';
 import {Event, FullEvent} from '../IEvent';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {MyCommentComponent} from '../my-comment';
-import {RouteData, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
+import {RouteData, Router, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
 import {Http} from 'angular2/http';
 
 @Component({
@@ -19,7 +19,7 @@ import {Http} from 'angular2/http';
 export class MyDetailviewComponent implements OnInit {
 //Auto-gen = MyDetailviewComponent - kolla om det gör något.
 
-  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams) {
+  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router) {
   }
   event: FullEvent = {name: "",
   date: "",
@@ -65,13 +65,23 @@ export class MyDetailviewComponent implements OnInit {
       this.ref.child('/events/').child(id).update({uid: id});
     }else {
       this.ref.child('/events').child(this.eventId).update(x);
+      this.router.navigate(['/Home', { uid: id }]);
+      return false;
     }
     //console.log(this.event);
     
   }
   
   delete() {
+    alert('ARE YOU SURE?');
      this.ref.child('/events/').child(this.eventId).remove();
+     this.router.navigate(['/Home']);
+     return false;
+  }
+  
+  cancel() {
+    this.router.navigate(['/Home']);
+    return false;
   }
   
   addComment() {
