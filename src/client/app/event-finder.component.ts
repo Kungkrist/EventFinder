@@ -21,7 +21,8 @@ import {MyShowDetailsviewComponent} from './my-show-detailsview';
   {path:'/home', name: 'Home', component: MyMainComponent, useAsDefault: true},
   {path:'/my-demosearch', name: 'My-demosearch', component: MyDemosearchComponent},
   {path:'/my-detailview', name: 'My-detailview', component: MyDetailviewComponent},
-  {path:'/my-show-detailsview', name: 'My-show-detailsview', component: MyShowDetailsviewComponent}
+  {path:'/my-show-detailsview', name: 'My-show-detailsview', component: MyShowDetailsviewComponent},
+  {path: '/*path', component: MyMainComponent}
 ])
 
 export class EventFinderApp {
