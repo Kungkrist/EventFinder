@@ -5,6 +5,8 @@ import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseR
 import {MyCommentComponent} from '../my-comment';
 import {RouteData, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
 import {Http} from 'angular2/http';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2/router';
+
 
 @Component({
   moduleId: __moduleName,
@@ -19,7 +21,7 @@ import {Http} from 'angular2/http';
 export class MyDetailviewComponent implements OnInit {
 //Auto-gen = MyDetailviewComponent - kolla om det gör något.
 
-  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams) {
+  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router) {
   }
   event: FullEvent = {name: "",
   date: "",
@@ -41,7 +43,7 @@ export class MyDetailviewComponent implements OnInit {
     // Get uid from sender
     this.params = this.injector.parent.get(RouteParams);
     this.eventId = this.params.get('uid');
-    console.log(this.eventId);
+    console.log('ost: ' + this.eventId);
     this.ref.child('/events').child('/'+this.eventId).on("value", (v) => this.event = v.val());
     
   }
@@ -50,10 +52,12 @@ export class MyDetailviewComponent implements OnInit {
     
   }
   
-  save(){
+  save(id){
     console.log(this.event);
     var x : FullEvent = this.event
     this.ref.child('/events').child(this.eventId).update(x);
+    this.router.navigate(['/My-show-detailsview', { uid: id }]);
+    return false;
   }
   
   addComment() {

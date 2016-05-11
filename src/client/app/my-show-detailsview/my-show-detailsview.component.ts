@@ -1,27 +1,55 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, Inject, Injector} from 'angular2/core';
 import {MyEventService} from '../my-event.service';
-import {Event} from '../IEvent';
+import {Event, FullEvent} from '../IEvent';
+import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
+import {MyCommentComponent} from '../my-comment';
+import {RouteData, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
+import {Http} from 'angular2/http';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2/router';
 
 @Component({
   moduleId: __moduleName,
   selector: 'my-show-detailsview',
   templateUrl: 'my-show-detailsview.component.html',
   styleUrls: ['my-show-detailsview.component.css'],
-  providers: [MyEventService]
+  providers: [MyEventService],
+  directives: [MyCommentComponent],
+  inputs: ['comments'],
 })
+//@CanActivate(() => tokenNotExpired())
 export class MyShowDetailsviewComponent implements OnInit {
 
-  constructor(private eventService: MyEventService) {}
+  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router) {
+  }
+  event: FullEvent = {name: "",
+  date: "",
+  start_time: "",
+  stop_time: "",
+  info: "",
+  adress: "",
+  comments: [""],
+  price: "",
+  organiser: "",
+  phone: "",
+  email: ""}
   
-  events = {}
-  public name = "Placeholder, change to data from db"
+  //FirebaseObjectObservable<Event>
+  
+  //public name = "Placeholder, change to data from db"
+  eventId;
   
   ngOnInit() {
-    this.getEvents();
-  }
-  
-  getEvents() {
-    this.events = this.eventService.getEvents();
+    // Get uid from sender
+    this.params = this.injector.parent.get(RouteParams);
+    this.eventId = this.params.get('uid');
+    this.ref.child('/events').child('/'+this.eventId).on("value", (v) => this.event = v.val());
+    
   }
 
+  
+  onClick(id){
+    this.router.navigate(['/My-detailview', { uid: id }]);
+    return false;
+  }
+  
 }

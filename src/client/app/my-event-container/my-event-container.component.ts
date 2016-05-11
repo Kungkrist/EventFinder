@@ -17,8 +17,7 @@ export class MyEventContainerComponent implements OnInit {
   events: FirebaseListObservable <any []>;
   
   onClick(id) {
-    console.log(id);
-    this.router.navigate(['/My-detailview', { uid: id }]);
+    this.router.navigate(['/My-show-detailsview', { uid: id }]);
   }
   
   constructor(public af: AngularFire, private router: Router) {}

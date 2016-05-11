@@ -4,6 +4,7 @@ import {AngularFire} from 'angularfire2';
 import {MyMainComponent} from './my-main';
 import {MyDemosearchComponent} from './my-demosearch';
 import {MyDetailviewComponent} from './my-detailview';
+import {MyShowDetailsviewComponent} from './my-show-detailsview';
 
 @Component({
   moduleId: __moduleName,
@@ -19,7 +20,8 @@ import {MyDetailviewComponent} from './my-detailview';
 
   {path:'/home', name: 'Home', component: MyMainComponent, useAsDefault: true},
   {path:'/my-demosearch', name: 'My-demosearch', component: MyDemosearchComponent},
-  {path:'/my-detailview', name: 'My-detailview', component: MyDetailviewComponent}
+  {path:'/my-detailview', name: 'My-detailview', component: MyDetailviewComponent},
+  {path:'/my-show-detailsview', name: 'My-show-detailsview', component: MyShowDetailsviewComponent}
 ])
 
 export class EventFinderApp {
