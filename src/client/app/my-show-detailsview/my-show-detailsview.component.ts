@@ -31,7 +31,9 @@ export class MyShowDetailsviewComponent implements OnInit {
   price: "",
   organiser: "",
   phone: "",
-  email: ""}
+  email: "", 
+  uid: null
+  }
   
   //FirebaseObjectObservable<Event>
   
