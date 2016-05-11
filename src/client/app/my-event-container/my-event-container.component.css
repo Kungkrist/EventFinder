@@ -4,10 +4,10 @@
 }
 
 .column {
-  height: 150px;
-  width: 150px;
+  height: 400px;
+  width: 200px;
   margin: 10px 10px 10px 10px;
-  border: solid black 0.5px;
+  border: solid black 1px;
 }
 .row {  
   margin: 0 auto;
@@ -18,9 +18,10 @@
 }
 
 .add-event {
-  font-size: 50px;
+  font-size: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
+  vertical-align: center;
   border-radius: 15px;
 }

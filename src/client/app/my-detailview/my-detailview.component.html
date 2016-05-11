@@ -87,7 +87,7 @@
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
-                <button type="button" class="btn btn-success">Wishlist</button>
+                <button type="button" class="btn btn-success" (click)="delete()">Delete</button>
                 <button type="submit" class="btn btn-default">Cancel</button>
                 <button type="submit" class="btn btn-primary" (click)="save(event.uid)">Save</button>
               </div>
@@ -96,8 +96,10 @@
 
         </fieldset>
       </form>
+      <!--
       <legend>Comments</legend>
       <my-comment [comments]="event.comments"></my-comment> 
+      -->
     </div><!-- /.col-lg-12 -->
 </div><!-- /.row -->
 
