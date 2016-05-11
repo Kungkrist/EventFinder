@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3 col-xs-12 column add-event rounded">+</div>
+    <div class="col-md-3 col-xs-12 column add-event rounded" (click)="onNewEventClick('')">+</div>
       <div *ngFor="#event of events | async">
         <my-tile [eventId]="event.uid" (click)="onClick(event.uid)"></my-tile>
       <!--<div class="col-md-3 col-xs-12 column">{{event.event}}</div>-->

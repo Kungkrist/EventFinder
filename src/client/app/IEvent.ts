@@ -13,9 +13,10 @@ export interface FullEvent {
   stop_time: string,
   info: string,
   adress: string, 
-  comments: [Object],
+  comments: [string],
   price: string,
   organiser: string,
   phone: string,
-  email: string
+  email: string,
+  uid: string
 }

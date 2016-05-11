@@ -27,22 +27,28 @@ export class MyDetailviewComponent implements OnInit {
   stop_time: "",
   info: "",
   adress: "", 
-  comments: [""],
+  comments: [null],
   price: "",
   organiser: "",
   phone: "",
-  email: ""}//FirebaseObjectObservable<Event>
+  email: "",
+  uid: null}//FirebaseObjectObservable<Event>
   
   //public name = "Placeholder, change to data from db"
-  eventId = "/event0"
-  
+  eventId = ""
+  newEvent = false
   ngOnInit() {
     this.getEvents();
     // Get uid from sender
     this.params = this.injector.parent.get(RouteParams);
     this.eventId = this.params.get('uid');
-    console.log(this.eventId);
-    this.ref.child('/events').child('/'+this.eventId).on("value", (v) => this.event = v.val());
+    if (this.eventId==="") {
+      console.log("empty " + this.eventId);
+      this.newEvent = true;  
+    }else {
+      console.log("set " + this.eventId);
+      this.ref.child('/events').child('/'+this.eventId).on("value", (v) => this.event = v.val());
+    }
     
   }
   
@@ -51,9 +57,17 @@ export class MyDetailviewComponent implements OnInit {
   }
   
   save(){
-    console.log(this.event);
     var x : FullEvent = this.event
-    this.ref.child('/events').child(this.eventId).update(x);
+    if (this.newEvent) {
+      var newRef = this.ref.child('/events').push(x);
+      var id = newRef.key();
+      console.log(id);
+      this.ref.child('/events/').child(id).update({uid: id});
+    }else {
+      this.ref.child('/events').child(this.eventId).update(x);
+    }
+    //console.log(this.event);
+    
   }
   
   addComment() {
