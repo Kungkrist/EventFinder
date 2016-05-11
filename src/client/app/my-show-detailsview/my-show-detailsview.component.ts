@@ -14,7 +14,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2
   styleUrls: ['my-show-detailsview.component.css'],
   providers: [MyEventService],
   directives: [MyCommentComponent],
-  inputs: ['comments'],
+  inputs: ['uid'],
 })
 //@CanActivate(() => tokenNotExpired())
 export class MyShowDetailsviewComponent implements OnInit {
