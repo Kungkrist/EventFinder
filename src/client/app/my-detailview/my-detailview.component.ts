@@ -5,7 +5,7 @@ import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseR
 import {MyCommentComponent} from '../my-comment';
 import {RouteData, Router, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
 import {Http} from 'angular2/http';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
 
 @Component({
@@ -24,17 +24,17 @@ export class MyDetailviewComponent implements OnInit {
   constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router) {
   }
   event: FullEvent = {name: "",
-  date: "",
-  start_time: "",
-  stop_time: "",
-  info: "",
-  adress: "", 
-  comments: [null],
-  price: "",
-  organiser: "",
-  phone: "",
-  email: "",
-  uid: null}//FirebaseObjectObservable<Event>
+                      date: "",
+                      start_time: "",
+                      stop_time: "",
+                      info: "",
+                      adress: "", 
+                      comments: [null],
+                      price: "",
+                      organiser: "",
+                      phone: "",
+                      email: "",
+                      uid: null}
   
   //public name = "Placeholder, change to data from db"
   eventId = ""
@@ -84,9 +84,19 @@ export class MyDetailviewComponent implements OnInit {
   
   checkValue() {
     console.log("inside checkValue")
-    for (var i in this.event) {
-      console.log(event[i])
-      if(event[i] === "" || event[i] === undefined) {
+    var newEvent = {name: this.event.name,
+                    date: this.event.date,
+                    start_time: this.event.start_time,
+                    stop_time: this.event.stop_time,
+                    info: this.event.info,
+                    adress: this.event.adress, 
+                    comments: [null],
+                    price: this.event.price,
+                    organiser: this.event.organiser,
+                    phone: this.event.phone,
+                    email: this.event.email}
+    for (var i in newEvent) {
+      if(newEvent[i] === "" || newEvent[i] === undefined) {
         return false
       }
     }
