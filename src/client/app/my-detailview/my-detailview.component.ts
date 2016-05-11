@@ -62,6 +62,10 @@ export class MyDetailviewComponent implements OnInit {
 
   save(eid){
     var x : FullEvent = this.event
+    if (!this.checkValue()) {
+      alert("Fyll i alla fält!")
+      return false
+    }
     if (this.newEvent) {
       var newRef = this.ref.child('/events').push(x);
       var id = newRef.key();
@@ -76,6 +80,17 @@ export class MyDetailviewComponent implements OnInit {
     }
     //console.log(this.event);
     
+  }
+  
+  checkValue() {
+    console.log("inside checkValue")
+    for (var i in this.event) {
+      console.log(event[i])
+      if(event[i] === "" || event[i] === undefined) {
+        return false
+      }
+    }
+    return true
   }
   
   delete() {
