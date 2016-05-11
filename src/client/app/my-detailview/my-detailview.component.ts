@@ -70,6 +70,10 @@ export class MyDetailviewComponent implements OnInit {
     
   }
   
+  delete() {
+     this.ref.child('/events/').child(this.eventId).remove();
+  }
+  
   addComment() {
     //Save comment to Event
     //this.ref.child('/events').child(eventId).child('comments')
