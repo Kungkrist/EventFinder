@@ -1,9 +1,7 @@
-.rounded {
-  height: 400px;
+.column {
+  height: 250px;
   width: 200px;
   margin: 10px 10px 10px 10px;
-  border: solid black 1px;
-  border-radius: 15px;
 }
 
 .lol {
@@ -17,11 +15,16 @@ body {
 }
 
 img {
-    max-width: 100%;
-    margin-top: 15px;
+    height: 150px;
+    width: 200px;
     background-color: grey;
+    margin: 0;
 }
 
 .title {
     font-size: 24px;
+}
+
+div.thumbnail {
+    padding: 0;
 }

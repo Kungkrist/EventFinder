@@ -1,13 +1,6 @@
 .container {
-  height: 300px;
+  height: 500px;
   overflow: auto;
-}
-
-.column {
-  height: 400px;
-  width: 200px;
-  margin: 10px 10px 10px 10px;
-  border: solid black 1px;
 }
 .row {  
   margin: 0 auto;
@@ -18,10 +11,22 @@
 }
 
 .add-event {
-  font-size: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: center;
-  border-radius: 15px;
+  height: 250px;
+  width: 200px;
+  margin: 10px 10px 10px 10px;
+}
+
+img {
+    height: 150px;
+    width: 160px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.lol {
+    font-weight: bold;
+    color: black;
+    text-align: left;
 }
