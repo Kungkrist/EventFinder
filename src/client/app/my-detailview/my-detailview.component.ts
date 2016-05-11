@@ -83,10 +83,22 @@ export class MyDetailviewComponent implements OnInit {
   }
   
   checkValue() {
+    var newEvent = {name: this.event.name,
+                    date: this.event.date,
+                    start_time: this.event.start_time,
+                    stop_time: this.event.stop_time,
+                    info: this.event.info,
+                    adress: this.event.adress, 
+                    comments: [null],
+                    price: this.event.price,
+                    organiser: this.event.organiser,
+                    phone: this.event.phone,
+                    email: this.event.email} 
+                    
     console.log("inside checkValue")
-    for (var i in this.event) {
-      console.log(event[i])
-      if(event[i] === "" || event[i] === undefined) {
+    for (var i in newEvent) {
+      console.log(newEvent[i])
+      if(newEvent[i] === "" || newEvent[i] === undefined) {
         return false
       }
     }
