@@ -1,0 +1,1 @@
+export {MyCarouselComponent} from './my-carousel.component';
