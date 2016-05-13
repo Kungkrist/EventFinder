@@ -1,3 +1,17 @@
 .container2 {
   margin-top: 60px;
 }
+
+nav {
+  background-color: rgba(179,115,67, 0);
+ 
+}
+
+a {
+  color: rgb(162,191,195);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
