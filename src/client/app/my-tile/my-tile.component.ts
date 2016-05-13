@@ -14,8 +14,8 @@ export class MyTileComponent implements OnInit {
   @Input () eventId;
   constructor(public af: AngularFire, @Inject(FirebaseRef) public ref: Firebase) {}
   
-  event = {}
-  
+  event = {};
+
   ngOnInit() {
     
      this.ref.child('/events/' + this.eventId).on("value", (a) => {

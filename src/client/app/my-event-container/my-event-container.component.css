@@ -1,11 +1,13 @@
 .container {
-  height: 500px;
+  height: 600px;
   overflow: auto;
   background-color: rgba(0,0,0,0.0); 
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .row {  
   margin: 0 auto;
-  width: 750px;
+  width: 780px;
 }
 .scrollable {
   height: 100%;
@@ -15,6 +17,8 @@
   height: 250px;
   width: 250px;
   padding: 0px;
+  margin: 5px;
+  background-color: rgba(255,255,255,0.3);
 }
 
 img {
@@ -32,5 +36,5 @@ img {
     text-align: left;
 }
 img:hover {
-  border: 2px solid black;
+  border: 5px solid rgba(0,0,0,0.0);
 }

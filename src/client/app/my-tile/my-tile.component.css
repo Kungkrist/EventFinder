@@ -1,40 +1,47 @@
 .column {
   height: 250px;
   width: 250px;
-  /*margin: 10px 10px 10px 10px;*/
   padding: 0px;
+  margin: 5px;
 }
 
 .lol {
     font-weight: bold;
     color: black;
     text-align: left;
+    font-family: cursive;
 }
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-img {
+.thumbnail img {
     height: 150px;
-    width: 250px;
+    width: 100%;
     background-color: grey;
     margin: 0;
-}
-
-.title {
-    font-size: 15px;
-    font-weight: bold;
-    color: black;
 }
 
 div.thumbnail {
     padding: 0;
     margin: 0;
 }
+
 .caption {
     height: 100px; 
 }
+
 .column:hover {
     border: 2px solid black;
+}
+
+legend {
+    font-family: cursive;
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 228px;
+    margin-bottom: 7.5px;
 }
