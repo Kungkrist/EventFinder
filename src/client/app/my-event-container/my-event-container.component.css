@@ -1,10 +1,11 @@
 .container {
   height: 500px;
   overflow: auto;
+  background-color: rgba(0,0,0,0.0); 
 }
 .row {  
   margin: 0 auto;
-  width: 680px;
+  width: 750px;
 }
 .scrollable {
   height: 100%;
@@ -12,13 +13,13 @@
 
 .add-event {
   height: 250px;
-  width: 200px;
-  margin: 10px 10px 10px 10px;
+  width: 250px;
+  padding: 0px;
 }
 
 img {
-    height: 150px;
-    width: 160px;
+    height: 250px;
+    width: 250px;
 }
 
 .title {
@@ -29,4 +30,7 @@ img {
     font-weight: bold;
     color: black;
     text-align: left;
+}
+img:hover {
+  border: 2px solid black;
 }

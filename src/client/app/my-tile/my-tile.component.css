@@ -1,7 +1,8 @@
 .column {
   height: 250px;
-  width: 200px;
-  margin: 10px 10px 10px 10px;
+  width: 250px;
+  /*margin: 10px 10px 10px 10px;*/
+  padding: 0px;
 }
 
 .lol {
@@ -16,15 +17,24 @@ body {
 
 img {
     height: 150px;
-    width: 200px;
+    width: 250px;
     background-color: grey;
     margin: 0;
 }
 
 .title {
-    font-size: 24px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
 }
 
 div.thumbnail {
     padding: 0;
+    margin: 0;
+}
+.caption {
+    height: 100px; 
+}
+.column:hover {
+    border: 2px solid black;
 }
