@@ -35,7 +35,7 @@ import {MyUserEventsComponent} from './my-user-events'
   {path: '/*path', component: MyMainComponent}
 ])
 
-export class EventFinderApp {
+export class EventFinderApp{
   users: FirebaseListObservable<{}>;
     constructor(public af : AngularFire, @Inject(FirebaseRef) public ref: Firebase) {}
 
@@ -69,5 +69,9 @@ export class EventFinderApp {
   public logout() {
     this.users = undefined;
     this.af.auth.logout();
+  }
+
+  ngOnInit() {
+    this.logout();
   }
 }
