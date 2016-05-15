@@ -29,14 +29,14 @@
         <div *ngFor="#user of users | async">
           <div *ngIf="user.$key === 'username'" >
             <div class="btn-group dropdown" dropdown>          
-              <button id="split-button" type="button" class="btn btn-danger" [routerLink]="['Tournaments']">{{user.$value}}</button>
+              <button id="split-button" type="button" class="btn btn-danger" [routerLink]="['UserEvents']">{{user.$value}}</button>
               <button type="button" class="btn btn-danger dropdown-toggle" dropdownToggle>
                 <span class="caret"></span>
                 <span class="sr-only">Split button!</span>
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
-                <li role="menuitem"><a class="dropdown-item" [routerLink]="['Events']">My events</a></li>
-                <li role="menuitem"><a class="dropdown-item" [routerLink]="['Settings']">Settings</a></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['UserEvents']">My events</a></li>
+                <!--<li role="menuitem"><a class="dropdown-item" [routerLink]="['Settings']">Settings</a></li> -->
                 <li class="divider dropdown-divider"></li>
                 <li role="menuitem"><a class="dropdown-item" (click)="logout()" [routerLink]="['Login']">Logout</a></li>
               </ul>

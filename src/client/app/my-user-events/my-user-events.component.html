@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">     
+    <div class="col-md-3 col-xs-12 column add-event" (click)="onNewEventClick('')">
+        <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/rounded-glossy-black-icons-alphanumeric/074184-rounded-glossy-black-icon-alphanumeric-plus-sign-simple.png">
+    </div>
+    <div *ngFor="#event of events | async">
+      <my-tile [eventId]="event.uid" (click)="onClick(event.uid)"></my-tile>
+    </div>
+  </div>
+</div>
+                 

@@ -11,6 +11,7 @@ import {MyLoginComponent} from './my-login/my-login.component';
 import {FirebaseRef, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {DROPDOWN_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
+import {MyUserEventsComponent} from './my-user-events'
 
 @Component({
   moduleId: __moduleName,
@@ -30,6 +31,7 @@ import {DROPDOWN_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
   {path:'/my-show-detailsview', name: 'My-show-detailsview', component: MyShowDetailsviewComponent},
   {path:'/create-account', name: 'CreateAccount', component: MyCreateAccountComponent},
   {path:'/login', name: 'Login', component: MyLoginComponent},
+   {path:'/my-events', name: 'UserEvents', component: MyUserEventsComponent},
   {path: '/*path', component: MyMainComponent}
 ])
 
