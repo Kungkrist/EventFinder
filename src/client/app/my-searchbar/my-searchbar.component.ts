@@ -18,7 +18,7 @@ export class MySearchbarComponent implements OnInit {
   }
   
   onClick() {
-    this.sentText = this.searchText;
+    this.sentText = this.searchText.toLocaleLowerCase();
   }
 
 }

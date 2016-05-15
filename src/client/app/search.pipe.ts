@@ -6,9 +6,8 @@ import {Pipe, PipeTransform} from 'angular2/core';
 export class Search implements PipeTransform {
 
   transform(value: any[], term): any[] {
-    console.log('vale: ' + value + ', term: ' + term)
     return value.map(items => {
-      return items.filter(item => item.name.includes(term));
+      return items.filter(item => item.name.toLocaleLowerCase().includes(term));
     });
   }
 
