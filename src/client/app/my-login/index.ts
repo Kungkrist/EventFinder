@@ -1,0 +1,1 @@
+export {MyLoginComponent} from './my-login.component';
