@@ -10,6 +10,7 @@ const barrels: string[] = [
   'app/my-event-container',
   'app/my-show-detailsview',
   'app/my-carousel',
+  'app/my-searchbar',
   /** @cli-barrel */
 ];
 
