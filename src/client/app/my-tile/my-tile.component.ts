@@ -20,7 +20,6 @@ export class MyTileComponent implements OnInit {
     
      this.ref.child('/events/' + this.eventId).on("value", (a) => {
        this.event = a.val();
-       console.log(this.event);
      });
     // this.event = this.af.database.list('/events');
   }

@@ -42,6 +42,7 @@ export class MyCommentComponent implements OnInit {
      
     if(this.ref.getAuth()) {          
       // Get the username of the logged in user.
+      console.log("hej");
       this.ref.child('/users').once('value', users => {
         let x = users.val();
         for(let user in x) {
