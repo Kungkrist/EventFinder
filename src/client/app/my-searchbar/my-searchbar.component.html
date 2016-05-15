@@ -2,9 +2,9 @@
 	<div class="row">
     <div id="custom-search-input">
       <div class="input-group col-md-12">
-        <input type="text" class="  search-query form-control" placeholder="Sök" />
+        <input type="text" class="  search-query form-control" placeholder="Sök" [(ngModel)]="searchText"/>
         <span class="input-group-btn">
-            <button class="btn btn-danger" type="button">
+            <button class="btn btn-danger" type="button" (click)="onClick()">
                 <span>Sök</span>
             </button>
         </span>
@@ -12,3 +12,5 @@
     </div>
 	</div>
 </div>
+
+<my-event-container [searchText]="sentText"></my-event-container>

@@ -1,8 +1,9 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit, Input} from 'angular2/core';
 import {EventDataService} from '../event-data.service';
 import {MyTileComponent} from  '../my-tile';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2/router';
+import {Search} from '../search.pipe';
 
 @Component({
   moduleId: __moduleName,
@@ -10,10 +11,11 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2
   templateUrl: 'my-event-container.component.html',
   styleUrls: ['my-event-container.component.css'],
   directives: [MyTileComponent],
-  inputs: ['eventId']
+  inputs: ['eventId', 'searchText'],
+  pipes: [Search]
 })
 export class MyEventContainerComponent implements OnInit {
-  
+  @Input() searchText;
   events: FirebaseListObservable <any []>;
   
   onClick(id) {
