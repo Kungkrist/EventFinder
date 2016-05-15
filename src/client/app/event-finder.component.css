@@ -15,3 +15,7 @@ a {
 a:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+.dropdown {
+  margin: 20px;
+}
