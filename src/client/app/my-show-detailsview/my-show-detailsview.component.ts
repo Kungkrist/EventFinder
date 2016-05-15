@@ -54,5 +54,15 @@ export class MyShowDetailsviewComponent implements OnInit {
     return false;
   }
   
+  // Check if the user is allowed to edit a specified event.
+  isValid() {
+    try {
+      if(this.event.uid.includes(this.ref.getAuth().uid))
+        return true;      
+    }catch(e) {      
+      return false;
+    }
+  }
+  
   
 }
