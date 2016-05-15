@@ -23,7 +23,7 @@ export class MyEventContainerComponent implements OnInit {
   constructor(public af: AngularFire, private router: Router) {}
   
   ngOnInit() {
-    this.events = this.af.database.list('/events')
+    this.events = this.af.database.list('/events');
   }
 
 }

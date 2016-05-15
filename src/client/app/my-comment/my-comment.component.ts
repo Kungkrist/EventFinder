@@ -3,13 +3,15 @@ import {Comment} from '../IComment';
 import {MyCommentService} from '../my-comment.service';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {Http} from 'angular2/http';
+import {MyReverseArray} from '../my-reverse-array.pipe'
 
 @Component({
   moduleId: __moduleName,
   selector: 'my-comment',
   templateUrl: 'my-comment.component.html',
   styleUrls: ['my-comment.component.css'],
-  providers: [MyCommentService]
+  providers: [MyCommentService],
+  pipes: [MyReverseArray]
 })
 export class MyCommentComponent implements OnInit {
   @Input()uid 
