@@ -43,17 +43,10 @@ export class MyCommentComponent implements OnInit {
     if(this.ref.getAuth()) {          
       // Get the username of the logged in user.
       console.log("hej");
-      this.ref.child('/users').once('value', users => {
-        let x = users.val();
-        for(let user in x) {
-          console.log('user: ' + user)
-          if(user === this.ref.getAuth().uid) {
-            console.log('user2: ' + user)
-            comment.username = x[user].username;
-            this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
-            return false;
-         }
-        }
+      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {       
+        comment.username = user.val().username;
+        this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+        return false;
       });
     }else {
     //this.comments.push(x);
