@@ -1,5 +1,4 @@
 import {Component, OnInit, Inject, Input} from 'angular2/core';
-import {MyEventService} from '../my-event.service';
 import {Event} from '../IEvent';
 import {AngularFire, FirebaseListObservable, FirebaseRef} from 'angularfire2';
 
@@ -8,7 +7,7 @@ import {AngularFire, FirebaseListObservable, FirebaseRef} from 'angularfire2';
   selector: 'my-tile',
   templateUrl: 'my-tile.component.html',
   styleUrls: ['my-tile.component.css'],
-  providers: [MyEventService]
+  providers: []
 })
 export class MyTileComponent implements OnInit {
   @Input () eventId;

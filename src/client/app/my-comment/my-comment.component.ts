@@ -1,6 +1,5 @@
 import {Component, OnInit, Input, Inject, Injector} from 'angular2/core';
 import {Comment} from '../IComment';
-import {MyCommentService} from '../my-comment.service';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {Http} from 'angular2/http';
 import {MyReverseArray} from '../my-reverse-array.pipe'
@@ -10,14 +9,14 @@ import {MyReverseArray} from '../my-reverse-array.pipe'
   selector: 'my-comment',
   templateUrl: 'my-comment.component.html',
   styleUrls: ['my-comment.component.css'],
-  providers: [MyCommentService],
+  providers: [],
   pipes: [MyReverseArray]
 })
 export class MyCommentComponent implements OnInit {
   @Input()uid 
   comments: Comment[]
   commentText =  ""
-  constructor( @Inject(FirebaseRef) public ref:Firebase, public injector: Injector, private _mcs : MyCommentService) {}
+  constructor( @Inject(FirebaseRef) public ref:Firebase, public injector: Injector) {}
   
   ngOnInit() {
   //  this._mcs.getComments().(r => this.comments = r);

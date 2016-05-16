@@ -1,5 +1,4 @@
 import {Component, OnInit, Inject, Injector} from 'angular2/core';
-import {MyEventService} from '../my-event.service';
 import {Event, FullEvent} from '../IEvent';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {MyCommentComponent} from '../my-comment';
@@ -13,7 +12,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
   selector: 'my-detailview',
   templateUrl: 'my-detailview.component.html',
   styleUrls: ['my-detailview.component.css'],
-  providers: [MyEventService],
+  providers: [],
   directives: [MyCommentComponent],
   inputs: ['comments']
 })
@@ -115,7 +114,8 @@ export class MyDetailviewComponent implements OnInit {
   }
   
   cancel() {
-    this.router.navigate(['/Home']);
+    var x : FullEvent = this.event
+    this.router.navigate(['/My-show-detailsview', {uid: x.uid}]);
     return false;
   }
   
