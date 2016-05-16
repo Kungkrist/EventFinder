@@ -1,6 +1,8 @@
   <div class="col-md-3 col-xs-12 column">
     <div class="thumbnail">
-      <img src="{{event.imageURL}}">
+      <div class="picContainer">
+        <img class="eventPicture" src="{{event.imageURL}}" onerror="this.src = 'http://i.imgur.com/jq4D5B6.png';">
+      </div>
       <div class="caption">
         <legend class="title">{{event.name}}</legend>
         <span class="lol">Date: </span><span class="lol">{{event.date}}</span><br>

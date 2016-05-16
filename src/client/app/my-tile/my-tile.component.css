@@ -45,3 +45,18 @@ legend {
     width: 228px;
     margin-bottom: 7.5px;
 }
+
+.eventPicture {
+    height: 100%;
+    width: 100%;
+}
+
+.picContainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picContainer {
+    padding: 0px;
+}

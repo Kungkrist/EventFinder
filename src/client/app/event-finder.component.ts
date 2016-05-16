@@ -72,6 +72,6 @@ export class EventFinderApp{
   }
 
   ngOnInit() {
-    this.logout();
+    //this.logout();
   }
 }

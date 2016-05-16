@@ -32,8 +32,8 @@ export class MyShowDetailsviewComponent implements OnInit {
   organiser: "",
   phone: "",
   email: "", 
-  uid: null
-  }
+  uid: null,
+  imageURL: ""}
   
   //FirebaseObjectObservable<Event>
   
