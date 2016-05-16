@@ -19,7 +19,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2
 //@CanActivate(() => tokenNotExpired())
 export class MyShowDetailsviewComponent implements OnInit {
 
-  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router) {
+  constructor(public af: AngularFire, @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router) {
   }
   event: FullEvent = {name: "",
   date: "",
@@ -53,5 +53,16 @@ export class MyShowDetailsviewComponent implements OnInit {
     this.router.navigate(['/My-detailview', { uid: id }]);
     return false;
   }
+  
+  // Check if the user is allowed to edit a specified event.
+  isValid() {
+    try {
+      if(this.event.uid.includes(this.ref.getAuth().uid))
+        return true;      
+    }catch(e) {      
+      return false;
+    }
+  }
+  
   
 }

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" [(ngModel)]="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" [(ngModel)]="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="password">
+  </div>
+  <button class="btn btn-danger" (click)="createAccount()">Create account</button>
+  <br>
+  <!--<a href="#">Already have an account?</a>-->
+</div>

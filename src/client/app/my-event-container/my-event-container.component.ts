@@ -22,14 +22,10 @@ export class MyEventContainerComponent implements OnInit {
     this.router.navigate(['/My-show-detailsview', { uid: id }]);
   }
   
-  onNewEventClick(id){
-    this.router.navigate(['/My-detailview', { uid: id }]);
-  }
-  
   constructor(public af: AngularFire, private router: Router) {}
   
   ngOnInit() {
-    this.events = this.af.database.list('/events')
+    this.events = this.af.database.list('/events');
   }
 
 }

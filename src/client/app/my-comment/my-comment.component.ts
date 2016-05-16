@@ -3,13 +3,15 @@ import {Comment} from '../IComment';
 import {MyCommentService} from '../my-comment.service';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {Http} from 'angular2/http';
+import {MyReverseArray} from '../my-reverse-array.pipe'
 
 @Component({
   moduleId: __moduleName,
   selector: 'my-comment',
   templateUrl: 'my-comment.component.html',
   styleUrls: ['my-comment.component.css'],
-  providers: [MyCommentService]
+  providers: [MyCommentService],
+  pipes: [MyReverseArray]
 })
 export class MyCommentComponent implements OnInit {
   @Input()uid 
@@ -31,16 +33,27 @@ export class MyCommentComponent implements OnInit {
   }
   
   postComment() {
-    console.log("Post");
-    var text = this.commentText
-    var x : Comment = {
-      username: "Anonymous",
-      time: "14:45",
-      date: "2016-05-23",
-      text: text
-    };
+    var text = this.commentText;
+    
+    var comment : Comment = {
+        username: "Anonymous",
+        time: "14:45",
+        date: "2016-05-23",
+        text: text
+      };
+     
+    if(this.ref.getAuth()) {          
+      // Get the username of the logged in user.
+      console.log("hej");
+      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {       
+        comment.username = user.val().username;
+        this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+        return false;
+      });
+    }else {
     //this.comments.push(x);
-    this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(x);
+    this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
     return false;
+    }
   }
 }
