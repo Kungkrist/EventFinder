@@ -109,7 +109,7 @@ export class MyDetailviewComponent implements OnInit {
 
   checkPicture() {
     if (this.event.imageURL === "" || this.event.imageURL === undefined) {
-      this.event.imageURL = "http://i.imgur.com/jq4D5B6.png";
+      this.event.imageURL = "http://cdn.almoststill.com/wp-content/uploads/2014/11/img-placeholder-dark.jpg";
     }
   }
 
