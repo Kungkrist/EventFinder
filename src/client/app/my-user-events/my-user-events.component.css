@@ -5,9 +5,10 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .row {  
   margin: 0 auto;
-  width: 780px;
+  width: 102%;
 }
 .scrollable {
   height: 100%;
