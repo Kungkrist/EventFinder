@@ -1,12 +1,13 @@
+ <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
   <div class="col-md-3 col-xs-12 column">
     <div class="thumbnail">
       <div class="picContainer">
-        <img class="eventPicture" src="{{event.imageURL}}" onerror="this.src = 'http://i.imgur.com/jq4D5B6.png';">
+        <img class="eventPicture" src="{{event.imageURL}}" onerror="this.src = 'http://cdn.almoststill.com/wp-content/uploads/2014/11/img-placeholder-dark.jpg';">
       </div>
       <div class="caption">
         <legend class="title">{{event.name}}</legend>
-        <span class="lol">Date: </span><span class="lol">{{event.date}}</span><br>
-        <span class="lol">Place: </span><span class="lol">{{event.adress}}</span>
+        <span class="glyphicon glyphicon-map-marker lol"></span><span class="lol">{{event.date}}</span><br>
+        <span class="lol"></span><span class="lol">{{event.adress}}</span>
       </div>
     </div>
   </div>

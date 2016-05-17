@@ -1,3 +1,5 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
 .column {
   height: 250px;
   width: 250px;
@@ -62,10 +64,15 @@ legend {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: auto;
+  max-width: 250px;
+  top: 0;
+  left: 0;
 }
 
 .picContainer {
     padding: 0px;
+    height: 100% !important;
 }
 
 .thumbnail {
