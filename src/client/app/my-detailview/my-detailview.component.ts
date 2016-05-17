@@ -5,14 +5,14 @@ import {MyCommentComponent} from '../my-comment';
 import {RouteData, Router, RouteParams, OnActivate, ComponentInstruction, CanActivate} from 'angular2/router';
 import {Http} from 'angular2/http';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
-
+import { DateHandlerService } from '../date-handler.service'
 
 @Component({
   moduleId: __moduleName,
   selector: 'my-detailview',
   templateUrl: 'my-detailview.component.html',
   styleUrls: ['my-detailview.component.css'],
-  providers: [],
+  providers: [DateHandlerService],
   directives: [MyCommentComponent],
   inputs: ['comments']
 })
@@ -20,7 +20,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
 export class MyDetailviewComponent implements OnInit {
 //Auto-gen = MyDetailviewComponent - kolla om det gör något.
 
-  constructor( @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router, public af: AngularFire) {
+  constructor(private dateHandlerService: DateHandlerService, @Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public injector: Injector, public params: RouteParams, private router: Router, public af: AngularFire) {
   }
   event: FullEvent = {name: "",
                       date: "",
@@ -70,13 +70,12 @@ export class MyDetailviewComponent implements OnInit {
 
     // If the user is creating a new event.
     if (this.newEvent) {
-      this.ref.child('/events/').once('value', a => {
-        var length = Object.keys(a.val()).filter( items => items.includes(this.ref.getAuth().uid)).length;
-        x.uid = this.ref.getAuth().uid + '-' + length;
-        var newRef = this.ref.child('/events/' + this.ref.getAuth().uid + '-' + length).update(x);
-        this.router.navigate(['/UserEvents']);
-        return false;
-      });
+      
+      var timeStamp = this.dateHandlerService.getTimeStamp();
+      x.uid = this.ref.getAuth().uid + '-' + timeStamp;
+      var newRef = this.ref.child('/events/' + x.uid).update(x);
+      this.router.navigate(['/UserEvents']);
+      return false;
 
     }else {
       this.ref.child('/events').child(this.eventId).update(x);
@@ -110,7 +109,7 @@ export class MyDetailviewComponent implements OnInit {
 
   checkPicture() {
     if (this.event.imageURL === "" || this.event.imageURL === undefined) {
-      this.event.imageURL = "http://i.imgur.com/jq4D5B6.png";
+      this.event.imageURL = "http://cdn.almoststill.com/wp-content/uploads/2014/11/img-placeholder-dark.jpg";
     }
   }
 
@@ -123,7 +122,12 @@ export class MyDetailviewComponent implements OnInit {
 
   cancel() {
     var x : FullEvent = this.event
-    this.router.navigate(['/My-show-detailsview', {uid: x.uid}]);
+    if (!x.uid) {
+      this.router.navigate(['/UserEvents']);
+    }else {
+      this.router.navigate(['/My-show-detailsview', {uid: x.uid}]);
+    }
+    
     return false;
   }
 

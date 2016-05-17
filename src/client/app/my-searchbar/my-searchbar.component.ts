@@ -10,7 +10,6 @@ import {MyEventContainerComponent} from '../my-event-container'
   inputs: ['searchText']
 })
 export class MySearchbarComponent implements OnInit {
-  searchText = '';
   sentText = '';
   constructor() {}
   
@@ -18,7 +17,7 @@ export class MySearchbarComponent implements OnInit {
   }
   
   onClick() {
-    this.sentText = this.searchText.toLocaleLowerCase();
+    //this.sentText = this.searchText.toLocaleLowerCase();
   }
 
 }

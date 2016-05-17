@@ -4,7 +4,6 @@
 
 nav {
   background-color: rgba(179,115,67, 0);
- 
 }
 
 a {
@@ -17,9 +16,8 @@ a:hover {
 }
 
 .dropdown {
-  margin: 20px;
+  margin-top: 20px;
 }
-
 
 button {
   background-color: rgba(253, 187, 181, 0.7);
@@ -39,4 +37,13 @@ button:focus {
 
 .btn-group {
   box-shadow: 0px 0px 10px black;
+}
+
+#logo {
+  margin-top: 7px;
+  margin-left: -20px;
+}
+
+a.router-link-active {
+  background-color: rgba(0, 0, 0, 0) !important;
 }

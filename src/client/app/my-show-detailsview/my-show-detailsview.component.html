@@ -5,7 +5,7 @@
         <fieldset>
 
           <!-- Form Name -->
-          <legend>Event Details</legend>
+          <legend>{{event.name}}</legend>
           
           <div class="picContainer">
             <img class="eventPicture" src="{{event.imageURL}}" onerror="this.src = 'http://cdn.almoststill.com/wp-content/uploads/2014/11/img-placeholder-dark.jpg'">
@@ -86,14 +86,14 @@
           <div class="form-group" *ngIf="(af.auth | async) && isValid()">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="pull-right">
-                <button type="submit" class="btn btn-primary" (click)="onClick(event.uid)">Edit</button>
+                <button type="submit" class="btn btn-primary" (click)="onClick(event.uid)">Ändra</button>
               </div>
             </div>
           </div>
 
         </fieldset>
       </form>
-      <legend>Comments</legend>
+      <legend>Kommentarer</legend>
       <my-comment [uid]="event.uid"></my-comment> 
       </div>    
     </div><!-- /.col-lg-12 -->

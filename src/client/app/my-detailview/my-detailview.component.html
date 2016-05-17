@@ -5,7 +5,8 @@
         <fieldset>
 
           <!-- Form Name -->
-          <legend>Event Details</legend>
+          <legend *ngIf="event.name === ''">Nytt Event</legend>
+          <legend *ngIf="event.name !== ''">{{event.name}}</legend>
           
           
           <div class="picContainer">
@@ -101,12 +102,12 @@
 
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <div class="pull-left">
-                <button type="button" class="btn btn-danger myButtonDelete" (click)="delete()">Delete</button>
+              <div *ngIf="event.uid" class="pull-left">
+                <button type="button" class="btn btn-danger myButtonDelete" (click)="delete()">Ta bort</button>
               </div>
               <div class="pull-right">
-                <button type="submit" class="btn btn-custom myButtonSave" (click)="save(event.uid)">Save</button>
-                <button type="submit" class="btn btn-custom myButtonCancel" (click)="cancel()">Cancel</button>
+                <button type="submit" class="btn btn-custom myButtonSave" (click)="save(event.uid)">Spara</button>
+                <button type="submit" class="btn btn-custom myButtonCancel" (click)="cancel()">Avbryt</button>
               </div>
             </div>
           </div>

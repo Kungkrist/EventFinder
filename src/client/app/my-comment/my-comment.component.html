@@ -2,9 +2,9 @@
   <div class="span4 well">
     <form accept-charset="UTF-8" action="" method="POST">
       <textarea class="span4" class="new_message" name="new_message"
-                placeholder="Type in your message" rows="5" [(ngModel)]="commentText"></textarea>
+                placeholder="Skriv in din kommentar" rows="5" [(ngModel)]="commentText"></textarea>
       <br>
-        <button class="btn btn-info" type="submit" (click)="postComment()">Post New Message</button>
+        <button class="btn btn-info" type="submit" (click)="postComment()">Skicka</button>
     </form>
   </div>
 </div>
@@ -34,7 +34,7 @@
       </div> <!-- /ngIf -->
     </div> <!-- /ngFor -->
     <div *ngIf="commentsCount() <= 0">
-      <h5 class="no-comments">Be the first one to comment!</h5>
+      <h5 class="no-comments">Bli den första som kommenterar!</h5>
     </div>
   </div><!-- /row -->
 </div><!-- /container -->
