@@ -1,7 +1,7 @@
 <nav class="navbar navbar-custom navbar-fixed-top">
   <div class="container">
     <ul class="nav navbar-nav navbar-left">
-        <li><a [routerLink]="['Home']">Home <span class="sr-only">(current)</span></a></li>
+        <li><a [routerLink]="['Home']"><img src="EF-logo.png" width="170px"> <span class="sr-only">(current)</span></a></li>
     </ul>
     
   <!--  <ul class="nav navbar-nav navbar-right">
@@ -22,7 +22,7 @@
             <li role="menuitem"><a class="dropdown-item" [routerLink]="['CreateAccount']">Skapa konto</a></li>
           </ul>
         </div>
-      </div>  
+      </div>
 
       <!-- Split button -->
       <span *ngIf="af.auth | async">
