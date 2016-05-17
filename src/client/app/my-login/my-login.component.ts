@@ -17,7 +17,7 @@ export class MyLoginComponent implements OnInit {
   constructor(public _af : AngularFire, @Inject(FirebaseRef) private _ref: Firebase, private router: Router) {}
   
   ngOnInit() {
-
+    //ost
   }
   
   login() {

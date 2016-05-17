@@ -18,5 +18,6 @@ export interface FullEvent {
   organiser: string,
   phone: string,
   email: string,
-  uid: string
-}
+  uid: string,
+  imageURL: string}
+  

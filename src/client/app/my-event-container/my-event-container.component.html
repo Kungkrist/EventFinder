@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="row">     
+  <div class="row">
+    <legend>Event</legend>     
     <div *ngFor="#event of events | search: searchText | async">
       <my-tile [eventId]="event.uid" (click)="onClick(event.uid)"></my-tile>
     </div>

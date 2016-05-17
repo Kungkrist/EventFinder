@@ -1,6 +1,5 @@
 import {Component, OnInit, Input, Inject, Injector} from 'angular2/core';
 import {Comment} from '../IComment';
-import {MyCommentService} from '../my-comment.service';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {Http} from 'angular2/http';
 import {MyReverseArray} from '../my-reverse-array.pipe'
@@ -10,14 +9,14 @@ import {MyReverseArray} from '../my-reverse-array.pipe'
   selector: 'my-comment',
   templateUrl: 'my-comment.component.html',
   styleUrls: ['my-comment.component.css'],
-  providers: [MyCommentService],
+  providers: [],
   pipes: [MyReverseArray]
 })
 export class MyCommentComponent implements OnInit {
   @Input()uid 
   comments: Comment[]
   commentText =  ""
-  constructor( @Inject(FirebaseRef) public ref:Firebase, public injector: Injector, private _mcs : MyCommentService) {}
+  constructor( @Inject(FirebaseRef) public ref:Firebase, public injector: Injector) {}
   
   ngOnInit() {
   //  this._mcs.getComments().(r => this.comments = r);
@@ -45,7 +44,8 @@ export class MyCommentComponent implements OnInit {
     if(this.ref.getAuth()) {          
       // Get the username of the logged in user.
       console.log("hej");
-      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {       
+      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {   
+        console.log("fisk");    
         comment.username = user.val().username;
         this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
         return false;

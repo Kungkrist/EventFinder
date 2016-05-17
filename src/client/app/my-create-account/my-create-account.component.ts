@@ -1,6 +1,7 @@
 import {Component, OnInit, Inject} from 'angular2/core';
 import {FirebaseRef, AngularFire} from 'angularfire2';
 import {User} from '../IUser';
+import {Router} from 'angular2/router';
 
 @Component({
   moduleId: __moduleName,
@@ -13,7 +14,7 @@ export class MyCreateAccountComponent implements OnInit {
   email: string = "ost";
   password: string;
   username: string;
-  constructor(public _af : AngularFire, @Inject(FirebaseRef) private _ref: Firebase) {}
+  constructor(public _af : AngularFire, @Inject(FirebaseRef) private _ref: Firebase, private router: Router) {}
   
   ngOnInit() {
   }
@@ -45,6 +46,7 @@ export class MyCreateAccountComponent implements OnInit {
                             email: this.email }
                           
         this._af.database.object("/users/" + userData.uid).set(user);
+        this.router.navigate(['/Login']);
       }
     });
     
