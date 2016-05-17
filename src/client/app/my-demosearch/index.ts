@@ -1,1 +1,0 @@
-export {MyDemosearchComponent} from './my-demosearch.component';

@@ -1,5 +1,4 @@
 import {Component, OnInit, Inject, Injector} from 'angular2/core';
-import {MyEventService} from '../my-event.service';
 import {Event, FullEvent} from '../IEvent';
 import {AngularFire, FirebaseListObservable, FirebaseObjectObservable, FirebaseRef} from 'angularfire2';
 import {MyCommentComponent} from '../my-comment';
@@ -12,7 +11,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2
   selector: 'my-show-detailsview',
   templateUrl: 'my-show-detailsview.component.html',
   styleUrls: ['my-show-detailsview.component.css'],
-  providers: [MyEventService],
+  providers: [],
   directives: [MyCommentComponent],
   inputs: ['uid'],
 })
