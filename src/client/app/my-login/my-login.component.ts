@@ -11,8 +11,9 @@ import {MyMainComponent} from '../my-main'
 })
 export class MyLoginComponent implements OnInit {
 
-   email: string;
+  email: string;
   password: string;
+  loginNotation: string = '';
   
   constructor(public _af : AngularFire, @Inject(FirebaseRef) private _ref: Firebase, private router: Router) {}
   
@@ -26,10 +27,10 @@ export class MyLoginComponent implements OnInit {
        password : this.password
       }, (error, authData) => {
        if (error) {
-        console.log("Login Failed!", error);
+        this.loginNotation = error;
        } else {
-        console.log("Authenticated successfully with payload:", authData);
         this.router.navigate(['/Home']);
+        this.loginNotation = '';
       }
     });
   }
