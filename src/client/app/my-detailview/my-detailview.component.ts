@@ -122,7 +122,12 @@ export class MyDetailviewComponent implements OnInit {
 
   cancel() {
     var x : FullEvent = this.event
-    this.router.navigate(['/My-show-detailsview', {uid: x.uid}]);
+    if (!x.uid) {
+      this.router.navigate(['/UserEvents']);
+    }else {
+      this.router.navigate(['/My-show-detailsview', {uid: x.uid}]);
+    }
+    
     return false;
   }
 

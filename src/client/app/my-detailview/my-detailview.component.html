@@ -101,7 +101,7 @@
 
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <div class="pull-left">
+              <div *ngIf="event.uid" class="pull-left">
                 <button type="button" class="btn btn-danger myButtonDelete" (click)="delete()">Delete</button>
               </div>
               <div class="pull-right">
