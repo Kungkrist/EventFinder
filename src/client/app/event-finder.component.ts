@@ -42,7 +42,6 @@ export class EventFinderApp{
     if(this.users === undefined) {
       try {
         this.users =  this.af.database.list('/users/' + this.ref.getAuth().uid);
-        console.log("hej");
       } catch(e) {
         
       }
@@ -55,7 +54,7 @@ export class EventFinderApp{
     'And another choice for you.', 'but wait! A third!'];
 
   public toggled(open:boolean):void {
-    console.log('Dropdown is now: ', open);
+    //console.log('Dropdown is now: ', open);
   }
 
   public toggleDropdown($event:MouseEvent):void {
