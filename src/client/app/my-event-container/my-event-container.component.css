@@ -49,3 +49,7 @@ img {
 img:hover {
   border: 5px solid rgba(0,0,0,0.0);
 }
+
+legend {
+  color: white;
+}

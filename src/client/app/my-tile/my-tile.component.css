@@ -6,39 +6,45 @@
 }
 
 .lol {
-    font-weight: bold;
-    color: black;
+    color: white;
     text-align: left;
-    font-family: cursive;
+    font-family: Helvetica, sans-serif;
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
+}
+
+.title {
+    color: white;
+    font-family: Helvetica, sans-serif;
 }
 
 .thumbnail img {
     height: 150px;
     width: 100%;
-    background-color: grey;
     margin: 0;
 }
 
 div.thumbnail {
     padding: 0;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .caption {
+    color: white;
+    font-family: Helvetica, sans-serif;
     height: 100px; 
 }
 
 .column:hover {
     border: 0px solid black;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: black;
 }
 
 legend {
-    font-family: cursive;
+    /*font-family: cursive;*/
     overflow: hidden !important;
     display: inline-block;
     text-overflow: ellipsis;
@@ -61,8 +67,8 @@ legend {
 .picContainer {
     padding: 0px;
 }
-/*
+
 .thumbnail {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 1);
   border: 0px;
-}*/
+}
