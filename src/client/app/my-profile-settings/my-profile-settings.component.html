@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="form-group">
+    <label for="exampleInputEmail1">E-post</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-post" [(ngModel)]="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Gammalt lösenord</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Gammalt lösenord" [(ngModel)]="oldPassword">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword2">Nytt lösenord</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Nytt lösenord" [(ngModel)]="newPassword">
+  </div>
+  <button class="btn btn-danger" (click)="changePassword()">Byt lösenord!</button>
+  <br>  
+  <h5>{{loginNotation}}</h5>
+</div>

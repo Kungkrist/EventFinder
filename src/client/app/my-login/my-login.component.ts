@@ -34,4 +34,30 @@ export class MyLoginComponent implements OnInit {
       }
     });
   }
+  
+  resetPassword() {
+    var str = prompt("Please enter your e-mail");
+    
+    if (str != null) {
+     
+        this._ref.child('/users').resetPassword({
+        email: str
+          }, error => {
+             if (error) {
+                switch (error.code) {
+                  case "INVALID_USER":
+                    console.log("The specified user account does not exist.");
+                  break;
+                 default:
+                    console.log("Error resetting password:", error);
+                  }
+                 } else {
+                    console.log("Password reset email sent successfully!");
+                    this.loginNotation = "Temporärt lösenord skickat till " + str;
+                 }
+              });
+        
+    }
+  }
+  
 }
