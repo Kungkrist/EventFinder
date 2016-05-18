@@ -70,3 +70,7 @@ h5.no-comments {
 .btn:hover {
 	  background-color: rgba(253, 187, 181, 1);
 }
+
+.comment-date-time {
+  text-align: right;
+}

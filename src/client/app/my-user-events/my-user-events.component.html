@@ -2,7 +2,9 @@
   <div class="row">     
     <legend class="col-xs-12">Mina evenemang</legend>
     <div class="col-md-3 col-xs-12 column add-event" (click)="onNewEventClick('')">
-        <img src="new-event3.png">
+      <div class="test">
+        <img class="addImage" src="new-event3.png">
+      </div>
     </div>
     <div *ngFor="#event of events | async">
       <my-tile [eventId]="event.uid" (click)="onClick(event.uid)"></my-tile>
