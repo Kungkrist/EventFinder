@@ -19,5 +19,13 @@ export interface FullEvent {
   phone: string,
   email: string,
   uid: string,
-  imageURL: string}
+  imageURL: string
+}
+export interface CarouselEvent {
+  name: string,
+  imageURL: string
+  date: string
+}
+  
+  
   
