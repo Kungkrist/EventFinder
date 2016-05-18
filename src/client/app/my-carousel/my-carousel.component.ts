@@ -2,8 +2,6 @@ import {Component, OnInit} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
 import {CAROUSEL_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 
-
-
 @Component({
   moduleId: __moduleName,
   selector: 'my-carousel',
@@ -34,3 +32,4 @@ export class MyCarouselComponent {
     this.slides.splice(index, 1);
   }
 }
+

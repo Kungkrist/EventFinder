@@ -14,6 +14,8 @@ const barrels: string[] = [
   'app/my-login',
   'app/my-create-account',
   'app/my-user-events',
+  'app/carousel-slide',
+  'app/carousel-comp',
   /** @cli-barrel */
 ];
 
