@@ -37,7 +37,7 @@ export class MyCommentComponent implements OnInit {
     var date = this.dateHandlerService.getDate();
     var time = this.dateHandlerService.getTime();
     var comment : Comment = {
-        username: "Anonymous",
+        username: "Anonym",
         time: time,
         date: date,
         text: text
@@ -45,17 +45,20 @@ export class MyCommentComponent implements OnInit {
      
     if(this.ref.getAuth()) {          
       // Get the username of the logged in user.
-      console.log("hej");
-      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {   
-        console.log("fisk");    
+      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {
         comment.username = user.val().username;
         this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+        this.commentText = "";
         return false;
       });
     }else {
-    //this.comments.push(x);
-    this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
-    return false;
+      if (/^\s+$/.test(comment.text) || comment.text === '') {
+        console.log("Whitespaces in text");
+      }else{
+        this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+        this.commentText = "";
+      }
+      return false;
     }
   }
 }
