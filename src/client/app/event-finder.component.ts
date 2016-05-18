@@ -4,6 +4,7 @@ import {AngularFire} from 'angularfire2';
 import {MyMainComponent} from './my-main';
 import {MyDetailviewComponent} from './my-detailview';
 import {MyShowDetailsviewComponent} from './my-show-detailsview';
+import {MyProfileSettingsComponent} from './my-profile-settings'
 
 import {MyCreateAccountComponent} from './my-create-account/my-create-account.component';
 import {MyLoginComponent} from './my-login/my-login.component';
@@ -29,7 +30,8 @@ import {MyUserEventsComponent} from './my-user-events'
   {path:'/my-show-detailsview', name: 'My-show-detailsview', component: MyShowDetailsviewComponent},
   {path:'/create-account', name: 'CreateAccount', component: MyCreateAccountComponent},
   {path:'/login', name: 'Login', component: MyLoginComponent},
-   {path:'/my-events', name: 'UserEvents', component: MyUserEventsComponent},
+  {path:'/my-events', name: 'UserEvents', component: MyUserEventsComponent},
+  {path:'/my-profile-settings', name: 'Settings', component: MyProfileSettingsComponent},
   {path: '/*path', component: MyMainComponent}
 ])
 

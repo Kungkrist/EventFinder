@@ -114,10 +114,15 @@ export class MyDetailviewComponent implements OnInit {
   }
 
   delete() {
-    alert('ARE YOU SURE?');
-     this.ref.child('/events/').child(this.eventId).remove();
-     this.router.navigate(['/Home']);
-     return false;
+    var x;
+    if (confirm("Är du säker?") == true) {
+        x = "Evenemanget raderades!";
+        this.ref.child('/events/').child(this.eventId).remove();
+        this.router.navigate(['/Home']);
+    } else {
+        x = "Avbröts";
+    }
+    return false;
   }
 
   cancel() {

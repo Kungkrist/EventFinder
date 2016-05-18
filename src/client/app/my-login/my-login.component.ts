@@ -34,4 +34,31 @@ export class MyLoginComponent implements OnInit {
       }
     });
   }
+  
+  resetPassword() {
+    var str = prompt("Please enter your e-mail");
+    
+    if (str != null) {
+      
+      var ref = new Firebase("https://sizzling-heat-4438.firebaseio.com/users");
+        ref.resetPassword({
+        email: str
+          }, function(error) {
+             if (error) {
+                switch (error.code) {
+                  case "INVALID_USER":
+                    console.log("The specified user account does not exist.");
+                  break;
+                 default:
+                    console.log("Error resetting password:", error);
+                  }
+                 } else {
+                    console.log("Password reset email sent successfully!");
+                    this.loginNotation = "Nytt lösen skickat till " + str;
+                 }
+              });
+        
+    }
+  }
+  
 }
