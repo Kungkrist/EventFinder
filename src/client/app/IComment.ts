@@ -2,5 +2,6 @@ export interface Comment {
   username: string,
   time: string,
   date: string,
-  text: string  
+  text: string,
+  gravatar: string,
 }

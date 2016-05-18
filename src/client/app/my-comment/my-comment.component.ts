@@ -47,6 +47,7 @@ export class MyCommentComponent implements OnInit {
         // Get the username of the logged in user.
         this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {
           comment.username = user.val().username;
+          comment.gravatar = user.val().gravatar;
           this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
           this.commentText = "";
           return false;

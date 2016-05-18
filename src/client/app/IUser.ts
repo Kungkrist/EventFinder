@@ -4,5 +4,6 @@ export interface User {
   events: [string],
   firstName: string,
   lastName: string,
-  email: string
+  email: string,
+  gravatar: string
 }

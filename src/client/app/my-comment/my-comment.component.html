@@ -15,7 +15,7 @@
       <div *ngFor="#comment of comments | myReverseArray">
         <div class="col-sm-3">
           <div class="thumbnail">
-          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+          <img class="img-responsive user-photo" src="{{comment.gravatar}}">
           </div><!-- /thumbnail -->
         </div><!-- /col-sm-1 -->
 

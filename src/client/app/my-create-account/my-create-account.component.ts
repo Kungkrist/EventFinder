@@ -15,6 +15,7 @@ export class MyCreateAccountComponent implements OnInit {
   password: string = '';
   username: string = '';  
   createAnnotation : string = '';
+  gravatar : string = '';
   
   constructor(public _af : AngularFire, @Inject(FirebaseRef) private _ref: Firebase, private router: Router) {}
   
@@ -42,12 +43,15 @@ export class MyCreateAccountComponent implements OnInit {
           }
         } else {
           this.createAnnotation = '';
+          var authData = this._ref.getAuth();
           let user : User = { username: this.username,
                               uid: userData.uid,
                               events: [''],
                               firstName: '',
                               lastName: '',
-                              email: this.email }
+                              email: this.email,
+                              gravatar: authData.password.profileImageURL
+                             }
                             
           this._af.database.object("/users/" + userData.uid).set(user);
           this.router.navigate(['/Login']);
