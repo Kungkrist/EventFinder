@@ -4,7 +4,7 @@ import {AngularFire} from 'angularfire2';
 import {MyMainComponent} from './my-main';
 import {MyDetailviewComponent} from './my-detailview';
 import {MyShowDetailsviewComponent} from './my-show-detailsview';
-
+import {MyProfileSettingsComponent} from './my-profile-settings'
 import {MyCreateAccountComponent} from './my-create-account/my-create-account.component';
 import {MyLoginComponent} from './my-login/my-login.component';
 import {FirebaseRef, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2';
@@ -29,7 +29,8 @@ import {MyUserEventsComponent} from './my-user-events'
   {path:'/my-show-detailsview', name: 'My-show-detailsview', component: MyShowDetailsviewComponent},
   {path:'/create-account', name: 'CreateAccount', component: MyCreateAccountComponent},
   {path:'/login', name: 'Login', component: MyLoginComponent},
-   {path:'/my-events', name: 'UserEvents', component: MyUserEventsComponent},
+  {path:'/my-events', name: 'UserEvents', component: MyUserEventsComponent},
+  {path:'/my-profile-settings', name: 'Settings', component: MyProfileSettingsComponent},
   {path: '/*path', component: MyMainComponent}
 ])
 
@@ -42,6 +43,7 @@ export class EventFinderApp{
     if(this.users === undefined) {
       try {
         this.users =  this.af.database.list('/users/' + this.ref.getAuth().uid);
+        console.log("hej");
       } catch(e) {
         
       }
@@ -54,7 +56,7 @@ export class EventFinderApp{
     'And another choice for you.', 'but wait! A third!'];
 
   public toggled(open:boolean):void {
-    //console.log('Dropdown is now: ', open);
+    console.log('Dropdown is now: ', open);
   }
 
   public toggleDropdown($event:MouseEvent):void {
@@ -67,13 +69,13 @@ export class EventFinderApp{
     this.users = undefined;
     this.af.auth.logout();
   }
-  
-  newEventClick() {
-    this.router.navigate(['/My-detailview', { uid: '' }]);
-    return false;
-  }
 
   ngOnInit() {
     //this.logout();
+  }
+  
+  newEventClick() {
+    this.router.navigate(['/My-detailview', { uid: ''}]);
+    return false;
   }
 }

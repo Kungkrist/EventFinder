@@ -37,25 +37,46 @@ export class MyCommentComponent implements OnInit {
     var date = this.dateHandlerService.getDate();
     var time = this.dateHandlerService.getTime();
     var comment : Comment = {
-        username: "Anonymous",
+        username: "Anonym",
         time: time,
         date: date,
         text: text
       };
-     
-    if(this.ref.getAuth()) {          
-      // Get the username of the logged in user.
-      console.log("hej");
-      this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {   
-        console.log("fisk");    
-        comment.username = user.val().username;
+    if (this.isInputValid(text)) {
+      if(this.ref.getAuth()) {    
+        // Get the username of the logged in user.
+        this.ref.child('/users/' + this.ref.getAuth().uid).once('value', user => {
+          comment.username = user.val().username;
+          this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+          this.commentText = "";
+          return false;
+        });
+      }
+      else {
+        if (text === '') {
+          console.log("String is empty");
+          return false;
+        }
+        if (/^ +$/.test(text) === true) {
+          console.log("Whitespaces in text");
+          return false;
+        }
         this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+        this.commentText = "";
         return false;
-      });
-    }else {
-    //this.comments.push(x);
-    this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
-    return false;
+      }
     }
+  }
+  //Returns true if text in commentfield is valid.
+  isInputValid(text: string) {
+      if (text === '') {
+        console.log("String is empty");
+        return false;
+      }
+      if (/^ +$/.test(text) === true) {
+        console.log("Whitespaces in text");
+        return false;
+      } 
+      return true;
   }
 }
