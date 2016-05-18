@@ -4,7 +4,7 @@
       <form class="form-horizontal" role="form">
         <fieldset>
 
-          <!-- Form Name -->
+
           <legend *ngIf="event.name === ''">Nytt Event</legend>
           <legend *ngIf="event.name !== ''">{{event.name}}</legend>
           
@@ -23,7 +23,7 @@
           <br>
           
           
-          <!-- Text input-->
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Namn</label>
             <div class="col-sm-10">
@@ -31,7 +31,7 @@
             </div>
           </div>
 
-          <!-- Text input-->
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Adress</label>
             <div class="col-sm-10">
@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          <!-- Text input-->
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Datum</label>
             <div class="col-sm-10">
@@ -47,7 +47,7 @@
             </div> 
           </div>
 
-          <!-- Text input-->
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Börjar</label>
             <div class="col-sm-4">
@@ -59,8 +59,7 @@
               <input type="text" [(ngModel)]="event.stop_time" placeholder="hh:mm" class="form-control">
             </div>
           </div>
-          
-          <!-- Text input-->
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Pris</label>
             <div class="col-sm-10">
@@ -68,7 +67,7 @@
             </div>   
           </div>
 
-                    <!-- Text input-->
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Info</label>
             <div class="col-sm-10">
@@ -78,7 +77,6 @@
 
           <br>
           <h5>Om arangören</h5>
-          <!-- Text input-->
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Arangör</label>
             <div class="col-sm-10">
@@ -111,14 +109,9 @@
               </div>
             </div>
           </div>
-
         </fieldset>
       </form>
       </div>
-      <!--
-      <legend>Comments</legend>
-      <my-comment [comments]="event.comments"></my-comment> 
-      -->
-    </div><!-- /.col-lg-12 -->
-</div><!-- /.row -->
+    </div>
+</div>
 
