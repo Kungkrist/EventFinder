@@ -50,11 +50,13 @@ export class MyCommentComponent implements OnInit {
         console.log("fisk");    
         comment.username = user.val().username;
         this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+        this.commentText = "";
         return false;
       });
     }else {
     //this.comments.push(x);
     this.ref.child('/events').child('/'+this.uid).child('/comments/'+this.comments.length).update(comment);
+    this.commentText = "";
     return false;
     }
   }
