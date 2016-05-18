@@ -20,6 +20,7 @@ button:hover {
   background-color: rgba(253, 187, 181, 1);
 }
 
-h5 {
-  color: rgba(255, 0, 0, 0.8);
+h4 {
+  width: fit-content;
+  color: rgba(255, 0, 0, 1);
 }

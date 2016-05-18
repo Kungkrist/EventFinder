@@ -35,12 +35,15 @@ this.ref.changePassword({
     switch (error.code) {
       case "INVALID_PASSWORD":
         console.log("The specified user account password is incorrect.");
+        this.loginNotation = "Lösenord stämmer inte!";
         break;
       case "INVALID_USER":
         console.log("The specified user account does not exist.");
+        this.loginNotation = "Användaren existerar inte!";
         break;
       default:
         console.log("Error changing password:", error);
+        this.loginNotation = "Lösenord ändrades inte!";
     }
   } else {
     console.log("User password changed successfully!");

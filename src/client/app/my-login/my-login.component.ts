@@ -27,7 +27,23 @@ export class MyLoginComponent implements OnInit {
        password : this.password
       }, (error, authData) => {
        if (error) {
-        this.loginNotation = error;
+         switch (error.code) {
+           case 'INVALID_USER':
+             console.log('The specified user account does not exist.');
+             this.loginNotation = 'Användaren existerar inte!';
+             break;
+           
+           case 'INVALID_PASSWORD':
+             this.loginNotation = 'Lösenord stämmer inte!';
+             break;
+           
+           case 'INVALID_TOKEN':
+             this.loginNotation = 'Temporärt lösenord stämmer inte!';
+             break;
+             
+           default:
+             break;
+         }
        } else {
         this.router.navigate(['/Home']);
         this.loginNotation = '';
@@ -36,7 +52,7 @@ export class MyLoginComponent implements OnInit {
   }
   
   resetPassword() {
-    var str = prompt("Please enter your e-mail");
+    var str = prompt('Skriv in din e-post adress');
     
     if (str != null) {
      
@@ -45,15 +61,17 @@ export class MyLoginComponent implements OnInit {
           }, error => {
              if (error) {
                 switch (error.code) {
-                  case "INVALID_USER":
-                    console.log("The specified user account does not exist.");
+                  case 'INVALID_USER':
+                    console.log('The specified user account does not exist.');
+                    this.loginNotation = 'Användaren existerar inte!';
                   break;
                  default:
-                    console.log("Error resetting password:", error);
+                    console.log('Error resetting password:', error);
+                    this.loginNotation = 'Lösenord ändrades inte!';
                   }
                  } else {
-                    console.log("Password reset email sent successfully!");
-                    this.loginNotation = "Temporärt lösenord skickat till " + str;
+                    console.log('Password reset email sent successfully!');
+                    this.loginNotation = 'Temporärt lösenord skickat till ' + str;
                  }
               });
         

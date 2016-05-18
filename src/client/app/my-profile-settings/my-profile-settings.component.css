@@ -21,6 +21,7 @@ button:hover {
 }
 
 
-h5 {
+h4 {
+  width: fit-content;
   color: rgba(255, 0, 0, 1);
 }
