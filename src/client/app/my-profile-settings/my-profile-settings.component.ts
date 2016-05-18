@@ -18,7 +18,7 @@ export class MyProfileSettingsComponent implements OnInit {
   email: string;
   oldPassword: string;
   newPassword: string;
-  loginNotation: string;
+  loginNotation: string ='';
   
   constructor(@Inject(FirebaseRef) public ref:Firebase, public data: RouteData, public params: RouteParams, private router: Router, public af: AngularFire) {}
   
@@ -30,7 +30,7 @@ this.ref.changePassword({
   email: this.email,
   oldPassword: this.oldPassword,
   newPassword: this.newPassword
-}, function(error) {
+}, error => {
   if (error) {
     switch (error.code) {
       case "INVALID_PASSWORD":
