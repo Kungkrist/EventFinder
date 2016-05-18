@@ -1,11 +1,10 @@
 import {Component, Inject} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from 'angular2/router';
 import {AngularFire} from 'angularfire2';
 import {MyMainComponent} from './my-main';
 import {MyDetailviewComponent} from './my-detailview';
 import {MyShowDetailsviewComponent} from './my-show-detailsview';
 import {MyProfileSettingsComponent} from './my-profile-settings'
-
 import {MyCreateAccountComponent} from './my-create-account/my-create-account.component';
 import {MyLoginComponent} from './my-login/my-login.component';
 import {FirebaseRef, FirebaseObjectObservable, FirebaseListObservable} from 'angularfire2';
@@ -37,7 +36,7 @@ import {MyUserEventsComponent} from './my-user-events'
 
 export class EventFinderApp{
   users: FirebaseListObservable<{}>;
-    constructor(public af : AngularFire, @Inject(FirebaseRef) public ref: Firebase) {}
+    constructor(public af : AngularFire, @Inject(FirebaseRef) public ref: Firebase, private router: Router) {}
 
   
     ngDoCheck() { 
@@ -73,5 +72,10 @@ export class EventFinderApp{
 
   ngOnInit() {
     //this.logout();
+  }
+  
+  newEventClick() {
+    this.router.navigate(['/My-detailview', { uid: ''}]);
+    return false;
   }
 }
