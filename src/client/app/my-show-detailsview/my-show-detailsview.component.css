@@ -79,3 +79,7 @@ button:hover {
 textarea {
   resize: vertical;
 }
+
+textarea:hover {
+  cursor: default;
+}
