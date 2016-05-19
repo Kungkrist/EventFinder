@@ -4,6 +4,7 @@ import {CAROUSEL_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 import {FirebaseRef, FirebaseListObservable, AngularFire} from 'angularfire2/angularfire2'
 import {CarouselEvent} from '../IEvent';
 import {Carousel} from '../carousel.pipe';
+import {Router} from 'angular2/router';
 
 @Component({
   moduleId: __moduleName,
@@ -17,38 +18,18 @@ export class MyCarouselComponent implements OnInit {
   public myInterval:number = 5000;
   public noWrapSlides:boolean = false;
   public slides: FirebaseListObservable <any []>;
-  
-  event: CarouselEvent = {
-    name: 'Hej',
-    date: 'igår',
-    imageURL: 'http://www.metalinjection.net/wp-content/uploads/2014/05/Ghost-New-Album.jpg'
-  }
 
-constructor(public af: AngularFire,@Inject(FirebaseRef) private _ref: Firebase) {
+constructor(public af: AngularFire,@Inject(FirebaseRef) private _ref: Firebase, 
+            private router: Router) {
 }
 
 ngOnInit() {
   this.slides = this.af.database.list('/events');
 }
 
-/*
-  public constructor() {
-    for (let i = 0; i < 4; i++) {
-      this.addSlide();
-    }
-  }
-*/
-  public addSlide(event: CarouselEvent):void {
-   // let newWidth = 600 + this.slides.le + 1;
-    /*this.slides.push({
-      image: event.imageURL,
-      name: event.name,
-      date: event.date
-    });*/
-  }
-
-  // public removeSlide(index:number):void {
-  //   this.slides.splice(index, 1);
-  // }
+onClicked(id: String) {
+  console.log("Klickad");
+  this.router.navigate(['/My-show-detailsview', { uid: id }]);
+}
 }
 

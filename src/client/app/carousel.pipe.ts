@@ -26,5 +26,4 @@ export class Carousel implements PipeTransform {
      
     });
   }
-
 }
