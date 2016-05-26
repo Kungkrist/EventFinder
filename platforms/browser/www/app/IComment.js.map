@@ -1,0 +1,1 @@
+{"version":3,"file":"IComment.js","sourceRoot":"","sources":["IComment.ts"],"names":[],"mappings":"","sourcesContent":["export interface Comment {\n  username: string,\n  time: string,\n  date: string,\n  text: string  \n}"]}

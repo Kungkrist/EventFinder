@@ -18,7 +18,8 @@ if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(EventFinderApp, 
+document.addEventListener('deviceready', () => {
+  bootstrap(EventFinderApp, 
 [
   RouteConfig,
   FIREBASE_PROVIDERS,
@@ -29,3 +30,4 @@ bootstrap(EventFinderApp,
     provider: AuthProviders.Password
   })
 ]);
+}, false);

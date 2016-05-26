@@ -1,0 +1,15 @@
+  <div class="col-md-6-offset-3 content">
+    <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+      <slide *ngFor="#slidez of slides | carousel | async"
+             [active]="slidez.active">
+       <div class="imageContent" (click)="onClicked(slidez.uid)">
+        <img src="{{slidez.imageURL}}">
+        <div class="carousel-caption">
+          <h4>Dagens evenemang</h4>
+          <p>{{slidez.name}}</p>
+          <p>{{slidez.date}}</p>
+        </div>
+       </div>
+      </slide>
+    </carousel>
+  </div>

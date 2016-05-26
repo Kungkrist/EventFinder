@@ -1,0 +1,77 @@
+.container2 {
+  margin-top: 100px;
+}
+
+nav {
+  background-color: rgba(179,115,67, 0);
+ 
+}
+
+a {
+  color: rgb(162,191,195);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a:hover {
+  background-color: rgba(255, 255, 255, 0.0) !important;
+}
+
+.dropdown {
+  margin: 20px;
+}
+
+
+button {
+  background-color: rgba(253, 187, 181, 0.7);
+  border: 0px;
+  color: white;
+}
+
+button:hover {
+  background-color: rgba(253, 187, 181, 1);
+}
+
+button:focus {
+  background-color: #FDbbb5;
+  color: white;
+  border: 0px;
+}
+
+.btn-group {
+  box-shadow: 0px 0px 10px black;
+}
+
+#logo {
+  margin-top: 7px;
+  margin-left: -50px;
+}
+
+a.router-link-active {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.navbar {
+  background-color: rgba(36, 50, 89, 0.9);
+  box-shadow: 0px 3px 5px rgba(36, 50, 89, 0.9) ;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 770px){
+  
+  #logo{
+    margin-left: 5px;
+  }
+  
+  .navbar button {
+    margin-top: -20px;
+  }
+  
+  .navbar {
+    height: 120px;
+  }
+  
+  .container2 {
+    margin-top:150px;
+  }
+  
+}

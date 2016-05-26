@@ -1,0 +1,117 @@
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="container">
+      <form class="form-horizontal" role="form">
+        <fieldset>
+
+
+          <legend *ngIf="event.name === ''">Nytt Event</legend>
+          <legend *ngIf="event.name !== ''">{{event.name}}</legend>
+          
+          
+          <div class="picContainer">
+            <img class="eventPicture" src="{{event.imageURL}}" onerror="this.src = 'http://cdn.almoststill.com/wp-content/uploads/2014/11/img-placeholder-dark.jpg'">
+          </div>
+          <br>
+                    
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Bild</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.imageURL" placeholder="Bild URL" class="form-control">
+            </div>
+          </div>
+          <br>
+          
+          
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Namn</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.name" class="form-control" placeholder="Namnet på eventet">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Adress</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.adress" class="form-control" placeholder="Vintergatan 1">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Datum</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.date" placeholder="åååå-mm-dd" class="form-control">
+            </div> 
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Börjar</label>
+            <div class="col-sm-4">
+              <input type="text" [(ngModel)]="event.start_time" placeholder="hh:mm" class="form-control">
+            </div>
+
+            <label class="col-sm-2 control-label" for="textinput">Slutar</label>
+            <div class="col-sm-4">
+              <input type="text" [(ngModel)]="event.stop_time" placeholder="hh:mm" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Pris</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.price" placeholder="00" class="form-control">
+            </div>   
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Info</label>
+            <div class="col-sm-10">
+              <textarea type="text" [(ngModel)]="event.info" placeholder="Beskrivning" class="form-control"></textarea>
+            </div>
+          </div>
+
+          <br>
+          <h5>Om arangören</h5>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Arangör</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.organiser" placeholder="EventFinder AB" class="form-control">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Mail</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.email" placeholder="email@gmail.com" class="form-control">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Telefon</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="event.phone" placeholder="0311234567" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div *ngIf="event.uid" class="pull-left">
+                <button type="button" class="btn btn-danger myButtonDelete" (click)="delete()">Ta bort</button>
+              </div>
+              <div class="pull-right">
+                <button type="submit" class="btn btn-custom myButtonSave" (click)="save(event.uid)">Spara</button>
+                <button type="submit" class="btn btn-custom myButtonCancel" (click)="cancel()">Avbryt</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      </div>
+    </div>
+</div>
+
