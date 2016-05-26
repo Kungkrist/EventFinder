@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -37,6 +36,6 @@ var FirebaseObjectObservable = (function (_super) {
         return this._ref.remove();
     };
     return FirebaseObjectObservable;
-}(Observable_1.Observable));
+})(Observable_1.Observable);
 exports.FirebaseObjectObservable = FirebaseObjectObservable;
 //# sourceMappingURL=firebase_object_observable.js.map

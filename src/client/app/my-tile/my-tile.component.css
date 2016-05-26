@@ -84,3 +84,71 @@ legend {
   border: 0px;
 } 
 
+@media (max-width: 650px) { 
+  .column {
+    height: 44%;
+    width: 140px;
+    padding: 0px;
+    margin: 5px;
+  }
+  .thumbnail img {
+    height: 90px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  .caption {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    margin-top: 2px;
+    font-size: 9px;
+  }
+  legend {
+    /*font-family: cursive;*/
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 7.5px;
+    font-size: 11px;
+  }    
+}
+
+@media (min-width:651px) and (max-width: 992px) {
+    .column {
+    height: 70%;
+    width: 190px;
+    padding: 0px;
+    margin: 5px;
+  }
+  .thumbnail img {
+    height: 130px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  .caption {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    margin-top: 2px;
+    font-size: 10px;
+  }
+  legend {
+    /*font-family: cursive;*/
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 7.5px;
+    font-size: 12px;
+  } 
+}
+

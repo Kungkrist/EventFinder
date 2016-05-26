@@ -1,9 +1,8 @@
-"use strict";
 var AuthBackend = (function () {
     function AuthBackend() {
     }
     return AuthBackend;
-}());
+})();
 exports.AuthBackend = AuthBackend;
 (function (AuthProviders) {
     AuthProviders[AuthProviders["Github"] = 0] = "Github";

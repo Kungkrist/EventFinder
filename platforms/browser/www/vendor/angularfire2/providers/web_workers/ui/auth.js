@@ -1,4 +1,3 @@
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,6 +37,6 @@ var MessageBasedFirebaseAuth = (function () {
         __metadata('design:paramtypes', [firebase_sdk_auth_backend_1.FirebaseSdkAuthBackend, worker_render_1.ServiceMessageBrokerFactory])
     ], MessageBasedFirebaseAuth);
     return MessageBasedFirebaseAuth;
-}());
+})();
 exports.MessageBasedFirebaseAuth = MessageBasedFirebaseAuth;
 //# sourceMappingURL=auth.js.map

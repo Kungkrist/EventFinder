@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -63,6 +62,6 @@ var FirebaseListObservable = (function (_super) {
         throw new Error("FirebaseListObservable.remove requires a key, snapshot, reference, or unwrapped snapshot. Got: " + typeof item);
     };
     return FirebaseListObservable;
-}(Observable_1.Observable));
+})(Observable_1.Observable);
 exports.FirebaseListObservable = FirebaseListObservable;
 //# sourceMappingURL=firebase_list_observable.js.map
