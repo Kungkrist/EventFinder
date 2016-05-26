@@ -1,6 +1,10 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
+<<<<<<< HEAD
 # sw.version: 03f667f38cb98ee657b098ce66e79deeac1338c3
+=======
+# sw.version: 1c5a4794be1181df9b070c45c412687a1dc0d579
+>>>>>>> 24842306f4476e6b856f9d896d1e07c06d5c9bac
 # sw.file.hash: 69cb5af3459ab89a5472f14c749ea13cb6a18e4c
 /EF-logo.png
 # sw.file.hash: cc0f8cf1248fc7682b210332e9a5f9f0e2f1904d
