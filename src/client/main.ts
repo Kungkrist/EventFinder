@@ -5,6 +5,8 @@ import {EventFinderApp} from './app/event-finder.component';
 import 'rxjs/Rx';
 import {ROUTER_PROVIDERS} from 'angular2/router';
 import {RouteConfig} from 'angular2/router';
+import {MyUsersService} from './app/my-users.service';
+import {MyEventsService} from './app/my-events.service';
 import {
   FIREBASE_PROVIDERS, 
   defaultFirebase, 
@@ -28,6 +30,7 @@ if (environment.production) {
   firebaseAuthConfig({
     method: AuthMethods.Redirect,
     provider: AuthProviders.Password
-  })
+  }), MyUsersService, MyEventsService
+  
 ]);
 //}, false);
