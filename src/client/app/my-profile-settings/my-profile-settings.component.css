@@ -25,7 +25,8 @@ h5 {
   color: rgba(255, 0, 0, 1);
 }
 
-@media (min-width: 1px) and (max-width: 1080px) {
+
+@media (max-width: 1080px) {
   .container {
     width: 90%;
   }
