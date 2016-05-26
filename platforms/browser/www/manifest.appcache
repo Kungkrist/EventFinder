@@ -1,10 +1,14 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
 <<<<<<< HEAD
+<<<<<<< HEAD
 # sw.version: 03f667f38cb98ee657b098ce66e79deeac1338c3
 =======
 # sw.version: 1c5a4794be1181df9b070c45c412687a1dc0d579
 >>>>>>> 24842306f4476e6b856f9d896d1e07c06d5c9bac
+=======
+# sw.version: d6c9ac85a43424677e5dfa14e27bb01d850e608f
+>>>>>>> layoutFix
 # sw.file.hash: 69cb5af3459ab89a5472f14c749ea13cb6a18e4c
 /EF-logo.png
 # sw.file.hash: cc0f8cf1248fc7682b210332e9a5f9f0e2f1904d
@@ -269,7 +273,11 @@ CACHE MANIFEST
 /favicon.png
 # sw.file.hash: a0ccd9e47216ab6f0d44c3ed96b28e8503decd44
 /icon.png
+<<<<<<< HEAD
 # sw.file.hash: 37c56fd5858f48b8449970ae9fe949485056733d
+=======
+# sw.file.hash: e2835ad52152c37d274450511686d1263da70061
+>>>>>>> layoutFix
 /index.html
 # sw.file.hash: b052c25a1919f4b7e9efe26e3c42fa6a46a813a0
 /main.js
