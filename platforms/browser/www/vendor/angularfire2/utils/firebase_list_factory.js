@@ -1,4 +1,3 @@
-"use strict";
 var firebase_list_observable_1 = require('./firebase_list_observable');
 var Firebase = require('firebase');
 var utils = require('./utils');

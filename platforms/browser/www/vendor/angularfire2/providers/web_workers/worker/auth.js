@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -135,6 +134,6 @@ var WebWorkerFirebaseAuth = (function (_super) {
         __metadata('design:paramtypes', [Firebase, client_message_broker_1.ClientMessageBrokerFactory, message_bus_1.MessageBus])
     ], WebWorkerFirebaseAuth);
     return WebWorkerFirebaseAuth;
-}(auth_backend_1.AuthBackend));
+})(auth_backend_1.AuthBackend);
 exports.WebWorkerFirebaseAuth = WebWorkerFirebaseAuth;
 //# sourceMappingURL=auth.js.map

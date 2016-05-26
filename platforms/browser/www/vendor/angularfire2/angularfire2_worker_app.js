@@ -1,4 +1,3 @@
-"use strict";
 var core_1 = require('angular2/core');
 var angularfire2_1 = require('./angularfire2');
 var auth_backend_1 = require('./providers/auth_backend');

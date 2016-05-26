@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -131,6 +130,6 @@ var FirebaseAuth = (function (_super) {
         __metadata('design:paramtypes', [auth_backend_1.AuthBackend, Object])
     ], FirebaseAuth);
     return FirebaseAuth;
-}(ReplaySubject_1.ReplaySubject));
+})(ReplaySubject_1.ReplaySubject);
 exports.FirebaseAuth = FirebaseAuth;
 //# sourceMappingURL=auth.js.map

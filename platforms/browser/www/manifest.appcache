@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: 47dce8b905a0e870aa6333814717f90e07723012
+# sw.version: 1c5a4794be1181df9b070c45c412687a1dc0d579
 # sw.file.hash: 69cb5af3459ab89a5472f14c749ea13cb6a18e4c
 /EF-logo.png
 # sw.file.hash: cc0f8cf1248fc7682b210332e9a5f9f0e2f1904d
@@ -301,73 +301,39 @@ CACHE MANIFEST
 /vendor/angular2/bundles/router.dev.js
 # sw.file.hash: 64b77bee26ce7c8298ed454d73776c7602d41694
 /vendor/angular2/bundles/upgrade.dev.js
-# sw.file.hash: 6815e2c80b95202c8f66f6ab39503dff8f3b69d4
+# sw.file.hash: 236338e7c37c324ec8c6f71529674f2b60692216
 /vendor/angularfire2/angularfire2.js
-# sw.file.hash: 46177bc704692d7d4b9cd32d5270f51154a8cf31
+# sw.file.hash: 9c6ad6d598c5a1d97f41692f00e445eb47f7b576
 /vendor/angularfire2/angularfire2_worker_app.js
-# sw.file.hash: 8bc029b405c9955c26ccdb13959a7089dc9af433
+# sw.file.hash: c53644d76601b7efe83c7955d4a697ad9dd3bcea
 /vendor/angularfire2/angularfire2_worker_render.js
-# sw.file.hash: e7892d4c7799587c8a11f54ec54ba7cc17117d66
+# sw.file.hash: e8c075371f837338d96c6b80341d537c53924653
 /vendor/angularfire2/database/database.js
-# sw.file.hash: 7bed8e70a7b5e169be685070162da3ba2bf65655
-/vendor/angularfire2/es6/angularfire2.js
-# sw.file.hash: 8d001d681968a40f1b9cba445395dc858c1ea439
-/vendor/angularfire2/es6/angularfire2_worker_app.js
-# sw.file.hash: 8bc37b1805a4489dc377c6d1f1383631e6834e05
-/vendor/angularfire2/es6/angularfire2_worker_render.js
-# sw.file.hash: e7a0035a1c4f1c06a591e0a514a62c43ed91c1d9
-/vendor/angularfire2/es6/database/database.js
-# sw.file.hash: 7f8c1914221655accc84432826fb002c88958f33
-/vendor/angularfire2/es6/providers/auth.js
-# sw.file.hash: c4801980437a34a7af37db6c31d1f964bb384f5e
-/vendor/angularfire2/es6/providers/auth_backend.js
-# sw.file.hash: 4a774c0db9ce7491265b9b85695f7299d09af684
-/vendor/angularfire2/es6/providers/firebase_sdk_auth_backend.js
-# sw.file.hash: c857533706117b27549da42a2973b0a28a2e58a5
-/vendor/angularfire2/es6/providers/web_workers/shared/channels.js
-# sw.file.hash: 6819f8fc6f02183b768a0932e144ed71e01a597f
-/vendor/angularfire2/es6/providers/web_workers/ui/auth.js
-# sw.file.hash: 23d7985d3e8aabe6eab5da460f01ca494a40b41d
-/vendor/angularfire2/es6/providers/web_workers/worker/auth.js
-# sw.file.hash: 4811db0f77ffcd75ec536b039b343719e630dcc2
-/vendor/angularfire2/es6/tokens.js
-# sw.file.hash: 450c90bdfe0ad1caad582c07bc9ac4286af2be15
-/vendor/angularfire2/es6/utils/absolute_path_resolver.js
-# sw.file.hash: 48273dd3fc68850fd00ef62ae8b9856f2d8539cb
-/vendor/angularfire2/es6/utils/firebase_list_factory.js
-# sw.file.hash: bd9a22ae6569c4095fc3a26f9e195e47f6e13277
-/vendor/angularfire2/es6/utils/firebase_list_observable.js
-# sw.file.hash: b285d09286c863fddf17a66736e03f9ed7960727
-/vendor/angularfire2/es6/utils/firebase_object_factory.js
-# sw.file.hash: 489b5d711aff5587ec3838d403aa1c0474d6afee
-/vendor/angularfire2/es6/utils/firebase_object_observable.js
-# sw.file.hash: e5e9bdd9ab7bfcb8a5de2cfcb12f01fa10bb1884
-/vendor/angularfire2/es6/utils/utils.js
-# sw.file.hash: 6768927f5f0b09a2f710df3436f0254c0b3ea263
+# sw.file.hash: 88f3c08f98dcfea61ed6871b185fe91e9e4bf51f
 /vendor/angularfire2/providers/auth.js
-# sw.file.hash: 87b68af40d557906e41bafcd1b6eea577df58849
+# sw.file.hash: b0915ff0aa7c27f4d446c0c07d621d7321644ea4
 /vendor/angularfire2/providers/auth_backend.js
-# sw.file.hash: 3c5ddeb3774529d92b23007390806cfe71c8a751
+# sw.file.hash: 1353fa39f9f28fea8a6eabcff0dad811daa29de7
 /vendor/angularfire2/providers/firebase_sdk_auth_backend.js
-# sw.file.hash: 06a6ead3206c156355d34a65fa4e202c02266a6f
+# sw.file.hash: b854eac4abbe2f2cdbd889155dafc84f95ab800f
 /vendor/angularfire2/providers/web_workers/shared/channels.js
-# sw.file.hash: e41d88f874cbf3a6e04781b12693cfa5e7182b28
+# sw.file.hash: 84a45bd64f0707b41e02fbb7fbac732e4eb73f05
 /vendor/angularfire2/providers/web_workers/ui/auth.js
-# sw.file.hash: 738f6225f453bf04fdd97237cd539196090ed008
+# sw.file.hash: 625f8a258e8a0d0e1b69913bf1ac9e4fdec5f387
 /vendor/angularfire2/providers/web_workers/worker/auth.js
-# sw.file.hash: 303c450d597a2b6d0fe67fbc4ab5d99991e58f05
+# sw.file.hash: fbe3ad43389d68e7805c603c2bd8e64be12bfc5d
 /vendor/angularfire2/tokens.js
-# sw.file.hash: 82d9cb8d6a268419e52d7715f660e2cef0685655
+# sw.file.hash: b3c40f65c9efd9d3c6f217b954be17de68935bc2
 /vendor/angularfire2/utils/absolute_path_resolver.js
-# sw.file.hash: b04abf48886342cb8627d10d6e5b50e94a9b7350
+# sw.file.hash: db432e9ba26685b37c8bb8bf158f7e8b511b2e03
 /vendor/angularfire2/utils/firebase_list_factory.js
-# sw.file.hash: 3f1f273a76401b3ed9a4f36a26a5fd920ee85170
+# sw.file.hash: 9a5090c69cd1a16d098284a3753a114b7db00a77
 /vendor/angularfire2/utils/firebase_list_observable.js
-# sw.file.hash: 7a566ea86f8dbfc882e0e4e92d6eff0a74a54881
+# sw.file.hash: 2bafd65f652b53d5f459e411c7e49f6402db43a7
 /vendor/angularfire2/utils/firebase_object_factory.js
-# sw.file.hash: 6b2bcf4da11e98196027ff92de1ea865b5d92f68
+# sw.file.hash: b0041c9803b4dfb7b35a28d968a4637ddb0d5507
 /vendor/angularfire2/utils/firebase_object_observable.js
-# sw.file.hash: 0fdb1e8d7e6d52d5712ac93250cd602718fcdfcc
+# sw.file.hash: c87adcd6d775d87b966bd11198e35539b7f99c21
 /vendor/angularfire2/utils/utils.js
 # sw.file.hash: 8eb176c70b9cfa6871b76d6dc98fb526e7e9b3de
 /vendor/bootstrap/dist/css/bootstrap.min.css
