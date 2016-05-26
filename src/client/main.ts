@@ -18,7 +18,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-document.addEventListener('deviceready', () => {
+//document.addEventListener('deviceready', () => {
   bootstrap(EventFinderApp, 
 [
   RouteConfig,
@@ -30,4 +30,4 @@ document.addEventListener('deviceready', () => {
     provider: AuthProviders.Password
   })
 ]);
-}, false);
+//}, false);

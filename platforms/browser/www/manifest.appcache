@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # sw.bundle: ng-cli
-# sw.version: 47dce8b905a0e870aa6333814717f90e07723012
+# sw.version: d6c9ac85a43424677e5dfa14e27bb01d850e608f
 # sw.file.hash: 69cb5af3459ab89a5472f14c749ea13cb6a18e4c
 /EF-logo.png
 # sw.file.hash: cc0f8cf1248fc7682b210332e9a5f9f0e2f1904d
@@ -265,7 +265,7 @@ CACHE MANIFEST
 /favicon.png
 # sw.file.hash: a0ccd9e47216ab6f0d44c3ed96b28e8503decd44
 /icon.png
-# sw.file.hash: f19919b5f512345104adb79b235c9521778776f7
+# sw.file.hash: e2835ad52152c37d274450511686d1263da70061
 /index.html
 # sw.file.hash: 74b03d43dbce55da2750625cfd39c073a33d62bc
 /main.js
