@@ -1,0 +1,20 @@
+img {
+  width: 100%;
+}
+.imageContent {
+  margin: auto;
+  align-content: center;
+  height: 300px;
+  width: 820px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  overflow: hidden;
+}
+
+content {
+  height: 400px;
+}
+
+.carousel {
+  height: 350px !important;
+}

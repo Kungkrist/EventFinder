@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="span4 well">
+    <form accept-charset="UTF-8" action="" method="POST">
+      <textarea class="span4" class="new_message" name="new_message"
+                placeholder="Skriv in din kommentar" rows="5" [(ngModel)]="commentText"></textarea>
+      <br>
+        <button class="btn btn-info" type="submit" (click)="postComment()">Skicka</button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div *ngIf="commentsCount() > 0">
+      <div *ngFor="#comment of comments | myReverseArray">
+        <div class="col-sm-3">
+          <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+          </div><!-- /thumbnail -->
+        </div><!-- /col-sm-1 -->
+
+        <div class="col-sm-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="row">
+                <strong class="col-xs-12 col-sm-6">{{comment.username}}</strong> <span class="text-muted comment-date-time col-xs12 col-sm-6">{{comment.date}} {{comment.time}}</span>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="comment-text">{{comment.text}}</div>
+            </div><!-- /panel-body -->
+          </div><!-- /panel panel-default -->
+        </div><!-- /col-sm-5 -->
+      </div> <!-- /ngIf -->
+    </div> <!-- /ngFor -->
+    <div *ngIf="commentsCount() <= 0">
+      <h5 class="no-comments">Bli den första som kommenterar!</h5>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->

@@ -1,0 +1,26 @@
+#custom-search-input {
+  max-width: 820px;
+  margin: 30px auto 0 auto;
+}
+.btn {
+  background-color: rgba(253, 187, 181, 1);
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgba(253, 187, 181, 0.7);
+}
+
+.form-control {
+  border-radius: 5px !important;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}

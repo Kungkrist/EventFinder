@@ -1,0 +1,1 @@
+export {MyMainComponent} from './my-main.component';

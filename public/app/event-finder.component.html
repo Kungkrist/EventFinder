@@ -1,0 +1,57 @@
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav navbar-left">
+        <li><a [routerLink]="['Home']"><img src="EF-logo.png" width="170px" id="logo"> <span class="sr-only">(current)</span></a></li>
+    </ul>
+    
+  <!--  <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Login <span class="sr-only">(current)</span></a></li>
+      <li><a href="#">Create account <span class="sr-only">(current)</span></a></li>
+    </ul> -->
+    
+     <ul class="nav navbar-nav navbar-right">
+      <div *ngIf="!(af.auth | async)">      
+        <div class="btn-group dropdown" dropdown>          
+          <button id="split-button" type="button" class="btn btn-danger" [routerLink]="['Login']">Inte inloggad</button>
+          <button type="button" class="btn btn-danger dropdown-toggle" dropdownToggle>
+            <span class="caret"></span>
+            <span class="sr-only">Split button!</span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+            <li role="menuitem"><a class="dropdown-item" [routerLink]="['Login']">Logga in</a></li>
+            <li role="menuitem"><a class="dropdown-item" [routerLink]="['CreateAccount']">Skapa konto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Split button -->
+      <span *ngIf="af.auth | async">
+        <div *ngFor="#user of users | async">
+          <div *ngIf="user.$key === 'username'" >
+            <div class="btn-group dropdown" dropdown>          
+              <button id="split-button" type="button" class="btn btn-danger" [routerLink]="['UserEvents']">{{user.$value}}</button>
+              <button type="button" class="btn btn-danger dropdown-toggle" dropdownToggle>
+                <span class="caret"></span>
+                <span class="sr-only">Split button!</span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="split-button">
+                <li role="menuitem"><a class="dropdown-item" href="" (click)="newEventClick()">Skapa evenemang</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['UserEvents']">Mina evenemang</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['Settings']">Inställningar</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" (click)="logout()" [routerLink]="['Login']">Logga ut</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </span>
+    </ul>
+  </div>
+</nav>
+
+<div class="container2">
+  <router-outlet></router-outlet>
+</div>
+
