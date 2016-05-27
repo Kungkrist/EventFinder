@@ -24,3 +24,9 @@
 ::-webkit-input-placeholder {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}

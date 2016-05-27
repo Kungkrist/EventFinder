@@ -79,7 +79,7 @@ label {
   background-color: rgba(253, 187, 181, 1);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .container {
     width: 90%;
   }
