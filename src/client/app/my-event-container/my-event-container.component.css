@@ -25,6 +25,11 @@
   height: 100%;
 }*/
 
+.no-events-text {
+  color: white;
+  text-align: center;
+}
+
 .add-event {
   height: 250px;
   width: 250px;

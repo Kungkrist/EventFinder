@@ -6,6 +6,7 @@ import {Pipe, PipeTransform} from 'angular2/core';
 export class Search implements PipeTransform {
 
   transform(value: any[], term): any[] {
+    
     return value.map(items => {
       // Filtered array of names
       let arr = items.filter(item => item.name.toLocaleLowerCase().includes(term));
@@ -14,9 +15,11 @@ export class Search implements PipeTransform {
       let arr2 = items.filter(item => item.info.toLocaleLowerCase().includes(term));
       
       // Adds the two arrays togheter and removes duplicates
-      return arr.concat(arr2.filter((item) => {
+      let result = arr.concat(arr2.filter((item) => {
         return arr.indexOf(item) < 0;
       }));
+      
+      return result.length > 0 ? result : ["no-events"];
     });
   }
 }

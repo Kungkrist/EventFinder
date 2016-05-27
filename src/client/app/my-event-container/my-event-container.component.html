@@ -2,7 +2,8 @@
   <div class="row">
     <legend>Event</legend>     
     <div *ngFor="#event of events | search: searchText | async">
-      <my-tile [eventId]="event.uid" (click)="onClick(event.uid)"></my-tile>
+      <h4 class="no-events-text" *ngIf="event === 'no-events'">Inga matchade event.</h4>
+      <my-tile *ngIf="event !== 'no-events'"[eventId]="event.uid" (click)="onClick(event.uid)"></my-tile>
     </div>
   </div>
 </div>
