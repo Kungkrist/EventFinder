@@ -1,33 +1,27 @@
 import {Injectable, Inject, OnInit} from 'angular2/core';
 import {AngularFire, FirebaseListObservable, FirebaseRef} from 'angularfire2';
 import {Event, FullEvent} from './IEvent';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class MyEventsService {
   constructor(public af: AngularFire, @Inject(FirebaseRef) public ref: Firebase) {}
 
-  event: FullEvent = {name: "",
-    date: "",
-    start_time: "",
-    stop_time: "",
-    info: "",
-    adress: "",
-    comments: [""],
-    price: "",
-    organiser: "",
-    phone: "",
-    email: "", 
-    uid: null,
-    imageURL: ""}
-    
-  getEvent(eventId){
+  
+  getEvent(eventId){    
     return new Promise(resolve => {
       this.ref.child('/events/' + eventId).on("value", (a) => {
-       resolve(a.val());
+       resolve(a.exportVal());
      });
     });
-     //return new Promise(resolve(this.event));
+  }
+  
+  updateEvent(eventId, data) {
+    return this.ref.child('/events/' + eventId).update(data);
   }
 
+  removeEvent(eventId) {
+    this.ref.child('/events/' + eventId).remove();
+  }
 }
  

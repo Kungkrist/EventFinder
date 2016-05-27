@@ -19,7 +19,7 @@ export class MyTileComponent implements OnInit {
   ngOnInit() {
     
    this.das.getEvent(this.eventId).then(result => {
-     
+     console.log("tile");
      this.event = result;
    });
     

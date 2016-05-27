@@ -22,4 +22,12 @@ export class MyUsersService {
   addUser(userId: String, data : any) {
     this._af.database.object("/users/" + userId).set(data);    
   }
+  
+  get loggedInUserId() {
+    return this._ref.getAuth().uid;
+  }
+  
+  get auth() {
+    return this._af.auth;
+  }
 }
