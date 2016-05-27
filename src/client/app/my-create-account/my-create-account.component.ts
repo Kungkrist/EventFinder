@@ -2,6 +2,7 @@ import {Component, OnInit, Inject} from 'angular2/core';
 import {FirebaseRef, AngularFire} from 'angularfire2';
 import {User} from '../IUser';
 import {Router} from 'angular2/router';
+import {MyUsersService} from '../my-users.service'
 
 @Component({
   moduleId: __moduleName,
@@ -16,7 +17,7 @@ export class MyCreateAccountComponent implements OnInit {
   username: string = '';  
   createAnnotation : string = '';
   
-  constructor(public _af : AngularFire, @Inject(FirebaseRef) private _ref: Firebase, private router: Router) {}
+  constructor(private router: Router, public userService : MyUsersService) {}
   
   ngOnInit() {
   }
@@ -25,11 +26,12 @@ export class MyCreateAccountComponent implements OnInit {
     var self : this;
     
     if (this.email !== '' && this.password !== '' && this.username !== '') {
-      this._ref.createUser({
-        email: this.email,
-        password: this.password
-      }, (error, userData) => {
-        if (error) {
+     
+      var createAccountResult = this.userService.createAccount(this.email, this.password);
+      createAccountResult.then(result => {
+        let error = result["error"];
+        let userData = result["userData"];
+        if(error) {
           switch (error.code) {
             case "EMAIL_TAKEN":
               this.createAnnotation = 'The new user account cannot be created because the email is already in use.';
@@ -49,10 +51,10 @@ export class MyCreateAccountComponent implements OnInit {
                               lastName: '',
                               email: this.email }
                             
-          this._af.database.object("/users/" + userData.uid).set(user);
+          this.userService.addUser(userData["uid"], user);
           this.router.navigate(['/Login']);
         }
-      });      
+      }); 
     }else {
       this.createAnnotation = 'You need to fill all the textfields.'
     }
