@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-event-container/index.ts"],"names":[],"mappings":";AAAA,6CAAwC,gCAAgC,CAAC;AAAjE,6FAAiE","sourcesContent":["export {MyEventContainerComponent} from './my-event-container.component';"]}

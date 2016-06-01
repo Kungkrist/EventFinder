@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-detailview/index.ts"],"names":[],"mappings":";AAAA,wCAAoC,2BAA2B,CAAC;AAAxD,gFAAwD","sourcesContent":["export {MyDetailviewComponent} from './my-detailview.component';"]}

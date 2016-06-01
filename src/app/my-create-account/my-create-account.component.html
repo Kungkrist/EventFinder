@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Användarnamn</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Användarnamn" [(ngModel)]="username">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">E-post</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-post" [(ngModel)]="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Lösenord</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Lösenord" [(ngModel)]="password">
+  </div>
+  <button class="btn btn-danger" (click)="createAccount()">Skapa konto</button>
+  <br>
+  <!--<a href="#">Already have an account?</a>-->
+   <h5>{{createAnnotation}}</h5>
+
+</div>

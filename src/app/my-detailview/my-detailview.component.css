@@ -1,0 +1,87 @@
+
+.full button span {
+  background-color: limegreen;
+  border-radius: 32px;
+  color: black;
+  }
+.partially button span {
+  background-color: orange;
+  border-radius: 32px;
+  color: black;
+}
+
+.picContainer {
+  width: 100%;
+  height: fit-content;
+}
+
+.eventPicture {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.picContainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+legend {
+  color: #FDbbb5;
+}
+
+h5 {
+  color: #FDbbb5;
+}
+
+label {
+  color: #FDbbb5;
+}
+
+.container {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  box-shadow: 0px 0px 20px black;
+  margin-bottom: 10%;
+}
+
+.myButtonDelete {
+  background-color: rgba(239, 35, 70, 0.7);
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.myButtonSave {
+  background-color: rgba(3, 240, 150, 0.7);
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+  color: white;
+}
+
+.myButtonCancel {
+  background-color: rgba(253, 187, 181, 0.7);
+  border: 0px;
+  box-shadow: 0px 0px 10px black;
+  color: white;
+}
+
+.myButtonSave:hover {
+  background-color: rgba(3, 240, 150, 1);
+}
+
+.myButtonDelete:hover {
+  background-color: rgba(239, 35, 70, 1);
+}
+
+.myButtonCancel:hover {
+  background-color: rgba(253, 187, 181, 1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+

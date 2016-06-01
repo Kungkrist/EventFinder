@@ -1,0 +1,1 @@
+export {MyTileComponent} from './my-tile.component';

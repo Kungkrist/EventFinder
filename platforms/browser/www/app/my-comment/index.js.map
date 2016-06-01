@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-comment/index.ts"],"names":[],"mappings":";AAAA,qCAAiC,wBAAwB,CAAC;AAAlD,uEAAkD","sourcesContent":["export {MyCommentComponent} from './my-comment.component';"]}

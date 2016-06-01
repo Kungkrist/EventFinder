@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-show-detailsview/index.ts"],"names":[],"mappings":";AAAA,8CAAyC,iCAAiC,CAAC;AAAnE,gGAAmE","sourcesContent":["export {MyShowDetailsviewComponent} from './my-show-detailsview.component';"]}

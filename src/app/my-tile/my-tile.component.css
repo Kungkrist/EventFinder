@@ -1,0 +1,154 @@
+
+.column {
+  height: 250px;
+  width: 250px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.lol {
+    color: white;
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+.title {
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+.thumbnail img {
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+div.thumbnail {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.caption {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    margin-top: 2px;
+}
+
+.thumbnail:hover > .caption {
+    border: 0px solid black;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+legend {
+    /*font-family: cursive;*/
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 228px;
+    margin-bottom: 7.5px;
+}
+
+.eventPicture {
+    height: 100%;
+    width: 100%;
+}
+
+.picContainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-width: 250px;
+  top: 0;
+  left: 0;
+  border-radius: 5px !important;
+}
+
+.picContainer {
+    padding: 0px;
+    height: 100% !important;
+}
+
+.thumbnail {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+} 
+
+@media (max-width: 650px) { 
+  .column {
+    height: 44%;
+    width: 140px;
+    padding: 0px;
+    margin: 5px;
+  }
+  .thumbnail img {
+    height: 90px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  .caption {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    margin-top: 2px;
+    font-size: 9px;
+  }
+  legend {
+    /*font-family: cursive;*/
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 7.5px;
+    font-size: 11px;
+  }    
+}
+
+@media (min-width:651px) and (max-width: 992px) {
+    .column {
+    height: 70%;
+    width: 190px;
+    padding: 0px;
+    margin: 5px;
+  }
+  .thumbnail img {
+    height: 130px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  .caption {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    margin-top: 2px;
+    font-size: 10px;
+  }
+  legend {
+    /*font-family: cursive;*/
+    overflow: hidden !important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin-bottom: 7.5px;
+    font-size: 12px;
+  } 
+}
+

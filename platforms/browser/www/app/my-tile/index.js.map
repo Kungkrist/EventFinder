@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-tile/index.ts"],"names":[],"mappings":";AAAA,kCAA8B,qBAAqB,CAAC;AAA5C,8DAA4C","sourcesContent":["export {MyTileComponent} from './my-tile.component';"]}

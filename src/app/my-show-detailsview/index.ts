@@ -1,0 +1,1 @@
+export {MyShowDetailsviewComponent} from './my-show-detailsview.component';

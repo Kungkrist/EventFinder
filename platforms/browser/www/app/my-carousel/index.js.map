@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-carousel/index.ts"],"names":[],"mappings":";AAAA,sCAAkC,yBAAyB,CAAC;AAApD,0EAAoD;AAE5D,kBAAkB","sourcesContent":["export {MyCarouselComponent} from './my-carousel.component';\n\n//Test for Daniel;"]}

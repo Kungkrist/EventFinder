@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/app/my-create-account/index.ts"],"names":[],"mappings":";AAAA,4CAAuC,+BAA+B,CAAC;AAA/D,0FAA+D","sourcesContent":["export {MyCreateAccountComponent} from './my-create-account.component';"]}
